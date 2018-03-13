@@ -3,12 +3,12 @@
 #central-container {
   background-color: black;
   width: 400px;
-  height: 700px;
+  height: 100vh;
   margin: auto;
 }
 .container1{
   /*center horizontaly*/
-  width: 326px; 
+  width: 326px;
   /*center verticaly*/
   margin:auto;
   margin-top: 15vh;
@@ -21,7 +21,7 @@ color:white;
 
 .container2{
   /*center horizontaly*/
-  width: 326px; 
+  width: 326px;
   /*center verticaly*/
   margin:auto;
   margin-top: 5px;
@@ -54,7 +54,7 @@ color:white;
   padding: 0.375rem 1.75rem;
   color:#38FC8C;
   border-color:#38FC8C;
-  
+
 }
 
 .btn-light{
@@ -91,7 +91,7 @@ color:white;
   margin-top: 0px;
   float: left;
   margin-left: 10px;
-  
+
 }
 .lock{
   width: 6%;
@@ -117,5 +117,3 @@ p{
   font-style: italic;
 
 }
-
-
