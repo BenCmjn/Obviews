@@ -6,7 +6,9 @@ body {
 }
 
 #central-container {
-  background-color: black;
+  border-style: solid;
+  border-color: black;
+  border-width: medium;
   width: 400px;
   height: 700px;
   margin: auto;
