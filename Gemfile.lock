@@ -294,6 +294,7 @@ DEPENDENCIES
   simplecov
   spring
   spring-watcher-listen
+  sprockets-rails
   sqlite3
   turbolinks
   tzinfo-data

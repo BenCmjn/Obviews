@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-  
-  devise_scope :user do
-	root to: "devise/sessions#new"
-  end
+
+  root 'board#index'
+  get 'board/index'
+  get 'board/share', to: 'board#share'
+
+  devise_for :users  
 end
+
