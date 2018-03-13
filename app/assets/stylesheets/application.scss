@@ -17,6 +17,8 @@ body {
   flex-direction: column;
 }
 
+/* ACTION BUTTONS */
+
 .CTA_button {
   background-color: #38FC8C;
   font-family: "Kalam";
@@ -53,4 +55,16 @@ body {
 
 .action_link:hover a {
   text-decoration: none;
+}
+
+.action-button {
+  
+}
+
+/* TEXT */
+
+.user-name-display {
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
