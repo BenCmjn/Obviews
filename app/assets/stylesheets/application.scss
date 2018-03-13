@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "board";
+@import "share";
 
 body {
   background-color: #808080;
@@ -8,7 +9,7 @@ body {
 
 #central-container {
   border-style: solid;
-  border-color: black;
+  background-color: black;
   border-width: medium;
   width: 400px;
   height: 100vh;
