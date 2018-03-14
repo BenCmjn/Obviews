@@ -12,6 +12,7 @@ class CreateMatches < ActiveRecord::Migration[5.1]
       t.string :candidate_2_firstname
       t.string :candidate_2_lastname
       t.text :candidate_2_bio
+      t.integer :user_id
 
       t.timestamps
     end
