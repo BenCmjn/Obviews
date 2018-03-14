@@ -1,0 +1,71 @@
+// Place all the styles related to the Match controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    width: 50%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    i {
+      color: white;
+    }
+}
+
+/* Change background color of buttons on hover */
+.tab button i:hover {
+  color: #38FC8C;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: black;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-width: 2px;
+    border-top-color: #38FC8C;
+    color: white;
+    i {
+      color: #38FC8C;
+    }
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+textarea {
+  border: 1px solid white;
+  background-color: inherit;
+  color: rgba(255, 255, 255, 0.5);
+  width: 80%;
+  font-family: "Open sans";
+  font-size: 14px;
+  font-style: italic;
+  padding: 10px;
+}

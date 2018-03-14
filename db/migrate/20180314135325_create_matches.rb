@@ -1,6 +1,6 @@
-class CreateBoards < ActiveRecord::Migration[5.1]
+class CreateMatches < ActiveRecord::Migration[5.1]
   def change
-    create_table :boards do |t|
+    create_table :matches do |t|
       t.integer :candidate_1_id
       t.integer :candidate_2_id
       t.integer :lock
@@ -12,6 +12,7 @@ class CreateBoards < ActiveRecord::Migration[5.1]
       t.string :candidate_2_firstname
       t.string :candidate_2_lastname
       t.text :candidate_2_bio
+      t.integer :user_id
 
       t.timestamps
     end

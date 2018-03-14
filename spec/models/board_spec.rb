@@ -13,8 +13,10 @@ RSpec.describe Board, type: :model do
 
   it "Creates a board instance and saves it if it belongs to a user" do
     user1 = User.new(firstname:"Baudouin", lastname:"Baudrier", email:"a@a.a", password:"coucou", password_confirmation:"coucou")
+    user1.save
     board1 = Board.new(user_id: user1.id)
     board1.save
-    expect(board1.errors.full_messages).not_to eq([])
+    expect(board1.errors.full_messages).to eq([])
+    expect(user1.board).not_to eq([])
   end
 end
