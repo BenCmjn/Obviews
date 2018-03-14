@@ -16,6 +16,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails'
 gem 'guard'
 gem 'rspec-rails'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3'

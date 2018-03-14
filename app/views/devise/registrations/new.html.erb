@@ -9,19 +9,23 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    
+
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
   </div>
 
   <div class="field">
-    
-    
+
+
     <%= f.password_field :password, autocomplete: "off",placeholder:"Password (6 chars min)",class: "field1" %>
   </div>
 
   <div class="field">
-   
+
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation",class: "field1" %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :avatar %>
   </div>
 
   <div class="actions">
