@@ -1,0 +1,36 @@
+.container-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.text-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  color: white;
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+}
+
+.yellow_p {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 18px;
+  color: #F2C94C;
+  width: 80%;
+  text-align: center;
+  margin: 10px;
+}

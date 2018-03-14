@@ -1,0 +1,86 @@
+@import "bootstrap";
+@import "board";
+@import "share";
+@import "confirmation";
+
+body {
+  background-color: #808080;
+  display: flex;
+}
+
+#central-container {
+  border-style: solid;
+  background-color: black;
+  border-width: medium;
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ACTION BUTTONS */
+
+.CTA_button {
+  background-color: #38FC8C;
+  font-family: "Kalam";
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
+}
+
+
+.CTA_button a {
+  text-decoration: none;
+  color: black;
+}
+
+.CTA_button:hover a {
+  text-decoration: none;
+  color: black;
+}
+
+.action_link a {
+  font-family: "Kalam";
+  font-size: 18px;
+  font-weight: bold;
+  color: #F2C94C;
+  text-decoration: none;
+  padding: 8px 40px;
+  letter-spacing: 2px;
+  margin: 20px 10px;
+}
+
+.action_link:hover a {
+  text-decoration: none;
+}
+
+.action-button {
+  border-color: #38FC8C;
+  border-width: 3px;
+  border-style: solid;
+  font-family: "Kalam";
+  font-size: 26px;
+  font-weight: bold;
+  color: #38FC8C;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
+}
+
+.action-button a {
+  text-decoration: none;
+  color: #38FC8C;
+}
+
+/* TEXT */
+
+.user-name-display {
+  display: inline-flex;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}

@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  root 'board#index'
+  get 'board/index'
+  get 'board/share', to: 'board#share'
+  get 'board/confirmation', to: 'board#confirmation'
+  devise_for :users
 end

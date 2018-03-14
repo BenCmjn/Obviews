@@ -13,6 +13,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap', '~> 4.0.0'
+gem 'sprockets-rails'
+gem 'guard'
 
 group :development, :test do
   gem 'sqlite3'
@@ -23,6 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
   gem 'simplecov'
+  gem 'guard-rspec', require: false
 end
 
 group :development do
