@@ -25,6 +25,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem "factory_bot_rails"
   gem 'simplecov'
+  gem 'guard-rspec', require: false
 end
 
 group :development do
