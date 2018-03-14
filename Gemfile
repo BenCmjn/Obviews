@@ -13,6 +13,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap', '~> 4.0.0'
+gem 'sprockets-rails'
+gem 'guard'
 
 group :development, :test do
   gem 'sqlite3'
