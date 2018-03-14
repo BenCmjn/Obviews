@@ -59,7 +59,22 @@ body {
 }
 
 .action-button {
+  border-color: #38FC8C;
+  border-width: 3px;
+  border-style: solid;
+  font-family: "Kalam";
+  font-size: 26px;
+  font-weight: bold;
+  color: #38FC8C;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
+}
 
+.action-button a {
+  text-decoration: none;
+  color: #38FC8C;
 }
 
 /* TEXT */
