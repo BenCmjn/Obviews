@@ -15,11 +15,12 @@ gem 'jbuilder'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails'
 gem 'guard'
+gem 'rspec-rails'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
-  gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'database_cleaner'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314135325) do
+ActiveRecord::Schema.define(version: 20180314172154) do
 
   create_table "archived_boards", force: :cascade do |t|
     t.integer "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20180314135325) do
     t.string "candidate_2_firstname"
     t.string "candidate_2_lastname"
     t.text "candidate_2_bio"
+    t.boolean "is_match"
   end
 
   create_table "boards", force: :cascade do |t|
