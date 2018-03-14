@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   has_one :board
+  has_many :matches
+  has_many :archived_boards
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
