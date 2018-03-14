@@ -5,7 +5,7 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-   
+
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
   </div>
 
@@ -14,20 +14,24 @@
   <% end %>
 
   <div class="field">
-    
     <%= f.password_field :password, autocomplete: "off",placeholder:"New Password (6 chars min)",class: "field1" %>
-    
-   
   </div>
 
   <div class="field">
-    
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:" New Password Confirmation",class: "field1" %>
   </div>
 
   <div class="field">
-   
+
     <%= f.password_field :current_password, autocomplete: "off", placeholder:"Mot de passe Actuel",class: "field1" %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :avatar %>
+
+    <% if @user.avatar? %>
+      <%= image_tag @user.avatar.url(:thumb) %>
+    <% end %>
   </div>
 
   <div class="actions">

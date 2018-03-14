@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'board/get_ids'
+
+  get 'board/new'
+
   root 'board#index'
   get 'board/index'
   get 'board/share', to: 'board#share'
