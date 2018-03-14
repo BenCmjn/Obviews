@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20180314135325) do
     t.string "candidate_2_firstname"
     t.string "candidate_2_lastname"
     t.text "candidate_2_bio"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
