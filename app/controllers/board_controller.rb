@@ -4,4 +4,7 @@ class BoardController < ApplicationController
 
   def share
   end
+
+  def confirmation
+  end
 end
