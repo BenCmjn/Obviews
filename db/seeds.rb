@@ -32,4 +32,3 @@ user4.save
 
 board4 = Board.new(user_id: user4.id)
 board4.save
-
