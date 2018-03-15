@@ -1,15 +1,21 @@
 class BoardController < ApplicationController
   def get_ids
-  	
-  	# return @fate 
+
+    # return @fate
   end
 
   def index
-  	ids = User.pluck(:id)       # User.pluck(:champ) va chercher toutes les instances de :champ dans la table User, puis le transforme en array
-  	@fate = ids.shuffle[0..1]   # On met ca dans une variable, puis on shuffle cette variable (on sort 2 valeurs au hasard de l'array)
-
-  	@candidate_1_id = @fate[0]   # @fate = 2 valeurs aléatoires que l'o va utiliser en tant que id pour le candidate 1 et 2
-  	@candidate_2_id = @fate[1]
+    def randomizer
+      ids = User.pluck(:id)       # User.pluck(:champ) va chercher toutes les instances de :champ dans la table User, puis le transforme en array
+      ids.delete_if {|id| id == current_user.id } # Ne jamais être soi-même dans les propositions…
+      @fate = ids.shuffle[0..1]   # On met ca dans une variable, puis on shuffle cette variable (on sort 2 valeurs au hasard de l'array)
+      return @fate
+    end # Return two random differents user ids, without the current_user one.
+    @board = Board.find(current_user.id)
+    @result = randomizer
+    
+    @candidate_1 = User.find(@result[0])
+    @candidate_2 = User.find(@result[1])
   end
 
   def share
