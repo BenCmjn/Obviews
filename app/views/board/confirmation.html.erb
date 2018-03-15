@@ -24,13 +24,18 @@
     </div>
 
     <div class="input-area">
-        <textarea>Dîtes un mot pour introduire la conversation…
-        </textarea>
+      <%= form_tag("/board/confirmation") do %>
+        <%= text_field_tag(:content) %>
+        <%= submit_tag("ENVOIE") %>
+        <% @a = params[:content] %>
+      <% end %>
     </div>
 
-    <div class="CTA_button">
+<!--     <div class="CTA_button">
           <a href='#'>ENVOIE !</a>
-    </div>
+    </div> -->
+
+    <%= mail_to "#{@user1.email}", "ENVOIE !", subject: "Vous avez matché avec #{@user1.firstname} !", body:"#{@a}" %>
 
     <div class="action_link">
           <a href='#' >Annuler</a>
