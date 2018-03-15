@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'board/confirmation', to: 'board#confirmation'
   devise_for :users
   get 'match/index', to: 'match#index'
-  get 'user/show', to: 'user#show'
+  get 'users/show', to: 'users#show'
 end
 
 #devise_for :users, controllers: {
