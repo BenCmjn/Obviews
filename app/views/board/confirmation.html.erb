@@ -24,15 +24,18 @@
     </div>
 
     <div class="input-area">
-        <textarea>Dîtes un mot pour introduire la conversation…
-        </textarea>
+
+      <%= form_tag users_show_path do%>
+      <%= text_area_tag 'body', ''%>
+      <%= submit_tag "submit",:value => "submit", class: "CTA_button" %>
+      <%end%>
     </div>
 
-    <div class="CTA_button">
-          <a href='#'>ENVOIE !</a>
+    <div>
+      <%= mail_to "segolene.alquier@yahoo.com", "ENVOIE !", subject: "Tu as un match sur obviews !", body: "Je pense que tu devrais rencontrer Michel"%>
     </div>
 
     <div class="action_link">
-          <a href='#' >Annuler</a>
+          <a href='/board/index' >Annuler</a>
     </div>
 </div>
