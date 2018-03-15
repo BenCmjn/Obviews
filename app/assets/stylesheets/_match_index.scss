@@ -1,0 +1,129 @@
+// Place all the styles related to the Match controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    width: 50%;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 5px;
+    transition: 0.3s;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    i {
+      color: white;
+    }
+}
+
+/* Change background color of buttons on hover */
+.tab button i:hover {
+  color: #38FC8C;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: black;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-width: 2px;
+    border-top-color: #38FC8C;
+    color: white;
+    i {
+      color: #38FC8C;
+    }
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* TEXTS */
+
+h1 {
+  font-family: "Kalam";
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.match-div {
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.match-div-img {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.match-div-1 {
+  width: 33%;
+}
+
+.match-div-2 {
+  width: 33%;
+  margin: auto;
+
+}
+
+.match-div-3 {
+  width: 33%;
+}
+
+.selected-name {
+  text-align: center;
+  color: white;
+  font-family: "Open sans";
+  font-size: 0.7em;
+  font-weight: lighter;
+  padding: 0;
+}
+
+/* IMAGES */
+
+img {
+  height: 80px;
+  width: 80px;
+}
+
+.image-self {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: auto;
+  border-color: #F2C94C;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.match-div-img {
+}

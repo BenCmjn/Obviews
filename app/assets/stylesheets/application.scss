@@ -2,10 +2,13 @@
 @import "board";
 @import "share";
 @import "confirmation";
+@import "registration";
+@import "match_index";
+
 
 body {
-  background-color: #808080;
-  display: flex;
+    background-color: #141424;
+    display: flex;
 }
 
 #central-container {
@@ -83,4 +86,5 @@ body {
   display: inline-flex;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  font-size: 1.3em;
 }
