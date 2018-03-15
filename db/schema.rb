@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315113911) do
+ActiveRecord::Schema.define(version: 20180315141746) do
 
   create_table "archived_boards", force: :cascade do |t|
     t.integer "user_id"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(version: 20180315113911) do
     t.boolean "is_match"
   end
 
+  create_table "archived_boards_users", id: false, force: :cascade do |t|
+    t.integer "archived_board_id", null: false
+    t.integer "user_id", null: false
+  end
+
   create_table "boards", force: :cascade do |t|
     t.integer "lock"
     t.datetime "created_at", null: false
@@ -27,11 +32,21 @@ ActiveRecord::Schema.define(version: 20180315113911) do
     t.integer "user_id"
   end
 
+  create_table "boards_users", id: false, force: :cascade do |t|
+    t.integer "board_id", null: false
+    t.integer "user_id", null: false
+  end
+
   create_table "matches", force: :cascade do |t|
     t.integer "lock"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "matches_users", id: false, force: :cascade do |t|
+    t.integer "match_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
