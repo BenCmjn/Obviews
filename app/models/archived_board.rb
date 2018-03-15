@@ -1,4 +1,3 @@
 class ArchivedBoard < ApplicationRecord
-	belongs_to :user
-	# validates :email, presence: true
+	has_and_belongs_to_many :users
 end
