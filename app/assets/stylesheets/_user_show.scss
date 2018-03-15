@@ -51,6 +51,8 @@ p.bio-description-self {
     img {
         object-fit: cover; // Pour centrer l'img dans son container, au centre + sans déformation
         height: auto;
+        width: 100%;
+    }
 }
 
 .action-bar {
