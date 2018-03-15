@@ -1,4 +1,5 @@
 class BoardController < ApplicationController
+  before_action :authenticate_user!
   def get_ids
 
     # return @fate
@@ -13,7 +14,7 @@ class BoardController < ApplicationController
     end # Return two random differents user ids, without the current_user one.
     @board = Board.find(current_user.id)
     @result = randomizer
-    
+
     @candidate_1 = User.find(@result[0])
     @candidate_2 = User.find(@result[1])
   end
