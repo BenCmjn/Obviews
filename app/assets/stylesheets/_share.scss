@@ -11,20 +11,19 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
+  p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    color: white;
+    width: 80%;
+    text-align: center;
+    margin: 10px;
+  }
 }
 
-p {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: lighter;
-  font-size: 18px;
-  color: white;
-  width: 80%;
-  text-align: center;
-  margin: 10px;
-}
-
-.yellow_p {
+.text-share .yellow_p {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: lighter;
