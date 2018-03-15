@@ -36,7 +36,6 @@ body {
   margin: 30px 10px;
 }
 
-
 .CTA_button a {
   text-decoration: none;
   color: black;
@@ -79,6 +78,18 @@ body {
 .action-button a {
   text-decoration: none;
   color: #38FC8C;
+}
+
+.action-button:hover {
+  background-color: #38FC8C;
+  font-family: "Kalam";
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
 }
 
 /* TEXT */

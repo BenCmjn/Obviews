@@ -24,7 +24,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'database_cleaner'
-  gem "factory_bot_rails"
+  gem "factory_bot_rails", :require => false
   gem 'simplecov'
   gem 'guard-rspec', require: false
 end
