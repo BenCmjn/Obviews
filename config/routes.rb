@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   get 'board/get_ids'
 
   get 'board/new'
@@ -10,6 +12,7 @@ Rails.application.routes.draw do
   get 'board/confirmation', to: 'board#confirmation'
   devise_for :users
   get 'match/index', to: 'match#index'
+  get 'user/show', to: 'user#show'
 end
 
 #devise_for :users, controllers: {
