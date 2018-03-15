@@ -15,7 +15,7 @@
         background-color: black;
         width: calc(100% - 10px);
         height: calc(100% - 10px);
-        z-index: 2;
+        z-index: 0;
         display: flex; // .bio_container is [display flex]
         .bio-description {
             p {
