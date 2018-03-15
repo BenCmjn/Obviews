@@ -93,3 +93,38 @@ p.bio-description-self {
 .action_link_user-show {
     margin: auto;
 }
+
+.fb-share-button {
+  border-color: white;
+  border-width: 1.5px;
+  border-style: solid;
+  font-family: "Kalam";
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 5px 10px 30px;
+  a {
+  text-decoration: none;
+  color: white;
+  font-weight: lighter;
+}
+}
+
+.fb-action-button {
+  border-color: #38FC8C;
+  border-width: 3px;
+  border-style: solid;
+  font-family: "Kalam";
+  font-size: 26px;
+  font-weight: bold;
+  color: #38FC8C;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 5px 10px;
+  a {
+  text-decoration: none;
+  color: #38FC8C;
+}
+}
