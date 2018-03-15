@@ -1,5 +1,5 @@
 <!-- TOP CONTAINER -->
-<div class= "candidate">
+<div class= "candidate_1">
   <div class="bio">
     <p class="bio_description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
@@ -9,7 +9,6 @@
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
       <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
-
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
@@ -23,7 +22,7 @@
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display">Thomas Darrigade</span>
+      <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
@@ -37,7 +36,7 @@
     <button type="button" class="btn btn-light">Next</button>
 </div>
 <!-- BOTTOM CONTAINER -->
-<div class= "candidate">
+<div class= "candidate_2">
   <div class="bio">
     <p class="bio_description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
@@ -61,7 +60,7 @@
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display">Thomas Darrigade</span>
+      <span class="user-name-display"><%= User.find(@candidate_2_id).firstname %> <%= User.find(@candidate_2_id).lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
