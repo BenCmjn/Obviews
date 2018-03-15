@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require match_index
+//= require fb_share
 //= require jquery3
 //= require jquery
 //= require jquery_ujs
