@@ -34,11 +34,10 @@ body {
   padding: 10px 50px;
   border-radius: 2px;
   margin: 30px 10px;
-}
-
-.CTA_button a {
-  text-decoration: none;
-  color: black;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .CTA_button:hover a {
@@ -90,6 +89,9 @@ body {
   padding: 10px 50px;
   border-radius: 2px;
   margin: 30px 10px;
+  a {
+    color: black;
+    }
 }
 
 /* TEXT */
