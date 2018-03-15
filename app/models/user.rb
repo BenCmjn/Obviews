@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_one :board
-  has_many :matches
-  has_many :archived_boards
+  has_and_belongs_to_many :boards
+  has_and_belongs_to_many :archived_boards
+  has_and_belongs_to_many :matches
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   #validates :bio, presence: true
   #validates :phone, presence: true, format: { with: FRENCH_PHONE_REGEX }
 
-  has_attached_file :avatar, styles: { medium: "300x300", thumb: "100x100" }
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+  has_attached_file :avatar, styles: { medium: "300x300", thumb: "100x100" }  # Can't seed db if these lines aren't commented
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/    # Can't seed db if these lines aren't commented
 
 end

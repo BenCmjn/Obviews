@@ -1,5 +1,5 @@
 <!-- TOP CONTAINER -->
-<div class= "candidate">
+<div class= "candidate_1">
   <div class="bio">
     <p class="bio_description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
@@ -8,21 +8,21 @@
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display">Thomas Darrigade</span>
+      <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
     </div>
   </div>
   <div class="picture">
-    <img class="img-fluid"
+<img class="img-fluid"
     src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"
     alt="Profil Picture">
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display">Thomas Darrigade</span>
+      <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
@@ -36,23 +36,34 @@
     <button type="button" class="btn btn-light">Next</button>
 </div>
 <!-- BOTTOM CONTAINER -->
-<div class= "candidate">
+<div class= "candidate_2">
   <div class="bio">
+    <p class="bio_description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
+    </p>
+    <div class="action-bar">
+      <!-- <i class="fav material-icons">star_border</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="fav material-icons active">star</i>
+      <span class="user-name-display"><%= User.find(@candidate_2_id).firstname %> <%= User.find(@candidate_2_id).lastname %></span>
+
+      <!-- <i class="lock material-icons">lock_open</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="lock material-icons active">lock</i>
+    </div>
   </div>
   <div class="picture">
-    <img class="img-fluid"
+<img class="img-fluid"
     src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"
     alt="Profil Picture">
     <div class="action-bar">
-        
-          <i class="fav material-icons">star_border</i>
-          <!-- Activer si le user clique sur cette div -->
-          <!-- <i class="fav material-icons">star</i> -->
-          <span class="user-name-display">Thomas Darrigade</span>
-          
-          <i class="lock material-icons">lock_open</i>
-          <!-- Activer si le user clique sur cette div -->
-          <!-- <i class="lock material-icons">lock</i> -->
+      <!-- <i class="fav material-icons">star_border</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="fav material-icons active">star</i>
+      <span class="user-name-display"><%= User.find(@candidate_2_id).firstname %> <%= User.find(@candidate_2_id).lastname %></span>
+      <!-- <i class="lock material-icons">lock_open</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="lock material-icons active">lock</i>
     </div>
   </div>
 </div>

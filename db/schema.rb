@@ -10,29 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314174818) do
+ActiveRecord::Schema.define(version: 20180315113911) do
 
   create_table "archived_boards", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "candidate_1_id"
-    t.integer "candidate_2_id"
     t.integer "lock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "candidate_1_picture"
-    t.string "candidate_1_firstname"
-    t.string "candidate_1_lastname"
-    t.text "candidate_1_bio"
-    t.text "candidate_2_picture"
-    t.string "candidate_2_firstname"
-    t.string "candidate_2_lastname"
-    t.text "candidate_2_bio"
     t.boolean "is_match"
   end
 
   create_table "boards", force: :cascade do |t|
-    t.integer "candidate_1_id"
-    t.integer "candidate_2_id"
     t.integer "lock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -40,17 +28,7 @@ ActiveRecord::Schema.define(version: 20180314174818) do
   end
 
   create_table "matches", force: :cascade do |t|
-    t.integer "candidate_1_id"
-    t.integer "candidate_2_id"
     t.integer "lock"
-    t.text "candidate_1_picture"
-    t.string "candidate_1_firstname"
-    t.string "candidate_1_lastname"
-    t.text "candidate_1_bio"
-    t.text "candidate_2_picture"
-    t.string "candidate_2_firstname"
-    t.string "candidate_2_lastname"
-    t.text "candidate_2_bio"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
