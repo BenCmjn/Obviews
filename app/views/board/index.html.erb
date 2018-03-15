@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="picture">
-    <%= image_tag @candidate_1.avatar.url(:thumb), class: "img-fluid"  %>
+    <%= image_tag @candidate_1.avatar.url(:preview), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
@@ -29,7 +29,10 @@
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
-    <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
+    <%= link_to users_show_path(current_user) do %>
+      <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
+    <% end %>
+    
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <button type="button" class="btn btn-light">Next</button>
 </div>
@@ -51,7 +54,7 @@
     </div>
   </div>
   <div class="picture">
-    <%= image_tag @candidate_2.avatar.url(:thumb), class: "img-fluid"  %>
+    <%= image_tag @candidate_2.avatar.url(:preview), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
