@@ -6,6 +6,10 @@ class BoardController < ApplicationController
   end
 
   def index
+    
+  end
+
+  def show
     def randomizer
       ids = User.pluck(:id)       # User.pluck(:champ) va chercher toutes les instances de :champ dans la table User, puis le transforme en array
       ids.delete_if {|id| id == current_user.id } # Ne jamais être soi-même dans les propositions…
