@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'board/index'
   get 'board/share', to: 'board#share'
   get 'board/confirmation', to: 'board#confirmation'
+  post '/users/show'
   devise_for :users
   get 'match/index', to: 'match#index'
   get 'users/show', to: 'users#show'

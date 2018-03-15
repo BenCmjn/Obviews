@@ -31,7 +31,9 @@
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
-    <img class = circle-image src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23472346_10155864352671552_8955388324388255932_n.jpg?oh=f8133af7e77cd65ee238ba66cebd44e3&oe=5B3CF69C" alt="Profil Picture">
+  <%= link_to users_show_path do %>
+    <%= image_tag "super1.jpg", class: "circle-image" %>
+  <% end %>
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <button type="button" class="btn btn-light">Next</button>
 </div>

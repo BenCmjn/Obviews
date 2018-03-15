@@ -1,7 +1,7 @@
 class BoardController < ApplicationController
   def get_ids
-  	
-  	# return @fate 
+
+  	# return @fate
   end
 
   def index
@@ -16,6 +16,12 @@ class BoardController < ApplicationController
   end
 
   def confirmation
+    @data = params[:body]
+  end
+
+private
+  def board_params
+    params.require(:board).permit(:body)
   end
 
 end
