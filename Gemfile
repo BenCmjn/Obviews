@@ -18,6 +18,7 @@ gem 'guard'
 gem 'rspec-rails'
 gem 'paperclip'
 gem 'mailjet'
+gem 'aws-sdk', '~> 2.3'
 
 
 group :development, :test do

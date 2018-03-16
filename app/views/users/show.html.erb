@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="picture-self">
-        <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img><!-- CHANGED HERE -->
+        <%= image_tag current_user.avatar.url(:original), class: "img-fluid"  %>
         <div class="action-bar">
           <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
             <a><%= link_to "Edit", edit_user_registration_path %>
@@ -38,6 +38,6 @@
 
 
     <div class="action_link action_link_user-show">
-      <a href='/board/index'>Retour</a>
+      <a href='/board/show'>Retour</a>
     </div>
 </div>

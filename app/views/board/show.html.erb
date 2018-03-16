@@ -1,20 +1,20 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
-  <div class="bio">
+  <div class="bio behind">
     <p class="bio_description">
       <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
+      <i class="fav material-icons">star_border</i>
       <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <!-- <i class="fav material-icons active">star</i> -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
+      <i class="lock material-icons">lock_open</i>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <!-- <i class="lock material-icons active">lock</i> -->
     </div>
   </div>
-  <div class="picture">
+  <div class="picture ahead">
     <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
@@ -35,11 +35,15 @@
     <% end %>
 
     <button type="button" class="btn btn-outline-danger">MATCH</button>
-    <button type="button" class="btn btn-light">Next</button>
+    
+    <%= link_to next_path do %>
+      <button type="button" class="btn btn-light">Next</button>
+    <% end %>
+
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
-  <div class="bio">
+  <div class="bio behind">
     <p class="bio_description">
       <%= @candidate_2.bio %>
     </p>
@@ -54,7 +58,7 @@
       <i class="lock material-icons active">lock</i>
     </div>
   </div>
-  <div class="picture">
+  <div class="picture ahead">
     <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
