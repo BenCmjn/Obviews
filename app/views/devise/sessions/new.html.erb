@@ -1,37 +1,35 @@
 <div class="container container-registration">
-<h4>Obviews!</h4>
-<br>
-<br>
-<br>
+    <h1>Obviews!</h1>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
-  </div>
+    <!-- FORM BEGINNING -->
 
-  <div class="field">
-   
-    <%= f.password_field :password, autocomplete: "off",placeholder:"Password (6 chars min)",class: "field1" %>
-  </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email",placeholder:"Email",class: "field1" %>
+        </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me , class: "white-text"%>
-      <%= f.label :remember_me, class: "white-text" %>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe",class: "field1" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me , class: "white-text"%>
+            <%= f.label :remember_me, class: "white-text" %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "SE CONNECTER" %>
+        </div>
+    <% end %>
+
+    <div class= "action_link">
+     <%= link_to 'Mot de passe oublié?', new_user_password_path, class: "password" %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "SE CONNECTER" %>
-  </div>
-<% end %>
+    <div class= "action-button">
+    <%= link_to "S'inscrire!", new_user_registration_path, class: "login" %>
+    </div>
 
-<div class= "action_link">
- <%= link_to 'Mot de passe oublié?', new_user_password_path, class: "password" %> 
-<br>
-<br>
-
-<%= link_to "S'inscrire!", new_user_registration_path, class: "login" %>
-</div>
 </div>

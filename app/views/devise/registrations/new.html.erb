@@ -1,6 +1,5 @@
 <div class="container container-registration">
-
-  <h4>Obviews!</h4>
+  <h1>Inscris-toi !</h1>
 
   <!-- FORM BEGINNING -->
 
@@ -8,15 +7,15 @@
     <%= devise_error_messages! %>
 
         <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
+          <%= f.text_field :firstname, placeholder:"Ton prénom",class: "field1" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :firstname, placeholder:"Prenom",class: "field1" %>
+          <%= f.text_field :lastname, placeholder:"Ton nom",class: "field1" %>
         </div>
 
         <div class="field">
-          <%= f.text_field :lastname, placeholder:"Nom de famille",class: "field1" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email",placeholder:"Email",class: "field1" %>
         </div>
 
         <div class="field">
@@ -24,11 +23,11 @@
         </div>
 
         <div class="field">
-          <%= f.password_field :password, autocomplete: "off",placeholder:"Password (6 chars min)",class: "field1" %>
+          <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe (6 caractères min)",class: "field1" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation",class: "field1" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmation du mot de passe",class: "field1" %>
         </div>
 
         <div class="field">
