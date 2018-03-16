@@ -8,7 +8,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-
   # POST /resource
   def create
     build_resource(sign_up_params)
@@ -31,9 +30,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
       respond_with resource
     end
-
-
   end
+
+  #POST /resource
+  # def create
+  #   super 
+  # end
+
 
   # GET /resource/edit
   # def edit

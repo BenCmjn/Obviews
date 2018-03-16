@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -10,6 +9,18 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '962af5a42d158f6cc02c277f8b281d8bc29e181bc54aade5d37458ac061107006420cdd12c45fc93d102b7382c004549f63b4db4b4529119a032a3e4957a8f7a'
 
+  Warden::Manager.after_set_user do |current_user,auth,opts|
+    if current_user.board_ids == []
+      current_user.boards << Board.create(user_id: current_user.id)
+      current_user.save
+    end
+  end
+  Warden::Manager.after_authentication do |current_user,auth,opts|
+    if current_user.board_ids == []
+      current_user.boards << Board.create(user_id: current_user.id)
+      current_user.save
+    end
+  end
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

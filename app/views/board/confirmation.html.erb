@@ -24,6 +24,7 @@
     </div>
 
     <div class="input-area">
+
       <%= form_tag("/board/confirmation") do %>
         <%= text_field_tag(:content) %>
         <%= submit_tag("ENVOIE") %>
@@ -38,6 +39,6 @@
     <%= mail_to "#{@user1.email}", "ENVOIE !", subject: "Vous avez matché avec #{@user1.firstname} !", body:"#{@a}" %>
 
     <div class="action_link">
-          <a href='#' >Annuler</a>
+          <a href='/board/index'>Annuler</a>
     </div>
 </div>

@@ -2,7 +2,7 @@
 <div class= "candidate_1">
   <div class="bio">
     <p class="bio_description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
+      <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="picture">
-    <%= image_tag @candidate_1.avatar.url(:preview), class: "img-fluid"  %>
+    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
@@ -29,10 +29,11 @@
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
+
     <%= link_to users_show_path(current_user) do %>
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
-    
+
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <button type="button" class="btn btn-light">Next</button>
 </div>
@@ -40,7 +41,7 @@
 <div class= "candidate_2">
   <div class="bio">
     <p class="bio_description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
+      <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
@@ -54,7 +55,7 @@
     </div>
   </div>
   <div class="picture">
-    <%= image_tag @candidate_2.avatar.url(:preview), class: "img-fluid"  %>
+    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->

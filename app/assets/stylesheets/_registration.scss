@@ -7,36 +7,31 @@
   padding: 0;
   color:white;
 }
+
 .picture-edit{
   img{
-
     width: 100%;
     border: 1px solid white;
+  }
+}
 
-   
-  }
-  }
 .field {
   width: 100%;
   padding-top: 20px;
   background-color: black;
   border-color: white;
-
 }
-
 
 .actions{
   background-color: #38FC8C;
   font-family: "Kalam";
   font-size: 26px;
-  
   color: black;
   letter-spacing: 2px;
   padding: 10px 50px;
   border-radius: 2px;
   margin: 30px 10px;
 }
-
 
 .field1 {
 border: 1px solid white;
@@ -52,20 +47,22 @@ border: 1px solid white;
   outline-color: #F2C94C;
 }
 
-h4{
+.container-registration h1 {
+
   font-family: "Kalam";
   font-weight: bold;
   color: white;
-  font-size: 300%;
+  font-size: 24px;
 
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
   -o-transform: rotate(-4deg);
   writing-mode: lr-tb;
+
 }
 
 input[type=submit] {
-  
+
     background-color: #38FC8C;
     border-radius: 4px;
     border-width: 0px;
@@ -77,4 +74,3 @@ input[type=submit] {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.5);
 }
-
