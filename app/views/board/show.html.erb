@@ -34,11 +34,15 @@
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
 
+    <%= link_to board_confirmation_path do %>
     <button type="button" class="btn btn-outline-danger">MATCH</button>
-    
-    <%= link_to next_path do %>
-      <button type="button" class="btn btn-light">Next</button>
     <% end %>
+    
+
+    <%= link_to next_path, type:"button", class:"action_link", method: :get do %>
+    <button type="button" class="action_link">Next</button>
+    <% end %>
+
 
 </div>
 <!-- BOTTOM CONTAINER -->
