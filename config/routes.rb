@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'board/new'
 
-  get 'board/index'
+  get 'board/index', to: 'board#index'
 
   get 'board/create', to: 'board#create'
 
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'
+
+  get 'board/next', to: 'board#next', as: 'next'
 end
 
 #devise_for :users, controllers: {

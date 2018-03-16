@@ -1,12 +1,11 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
+  before_action :show
+  
   def get_ids
-
-  	# return @fate
   end
 
   def index
-    
   end
 
   def show
@@ -16,11 +15,20 @@ class BoardController < ApplicationController
       @fate = ids.shuffle[0..1]   # On met ca dans une variable, puis on shuffle cette variable (on sort 2 valeurs au hasard de l'array)
       return @fate
     end # Return two random differents user ids, without the current_user one.
+    @lock = 0 # TO DELETE WHEN NEEDED!!!!
     @result = randomizer
     @board = Board.find(current_user.board_ids.first)
 
     @candidate_1 = User.find(@result[0])
     @candidate_2 = User.find(@result[1])
+  end
+
+  def next
+    aboard = ArchivedBoard.create(user_id: current_user.id)
+    aboard.users=[@candidate_1, @candidate_2]
+    aboard.lock = @lock
+    aboard.save
+    byebug
   end
 
   def share
