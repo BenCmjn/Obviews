@@ -36,11 +36,10 @@
 
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     
-    <%= link_to board_show_path(current_user) do %>
+    <%= link_to next_path do %>
       <button type="button" class="btn btn-light">Next</button>
     <% end %>
 
-    <%= button_to 'nexttest', next_path, method: :get %>
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
