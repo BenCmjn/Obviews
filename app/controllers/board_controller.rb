@@ -28,7 +28,6 @@ class BoardController < ApplicationController
     aboard.users=[@candidate_1, @candidate_2]
     aboard.lock = @lock
     aboard.save
-    byebug
   end
 
   def share
