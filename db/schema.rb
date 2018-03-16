@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20180315141746) do
   end
 
   create_table "boards", force: :cascade do |t|
-    t.integer "lock", default: 0
+    t.integer "lock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
