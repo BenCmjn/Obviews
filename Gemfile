@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # authentification
 #gem 'pundit'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails'
 gem 'devise'
 gem 'rails'
 gem 'puma'
