@@ -1,8 +1,5 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
-  def create
-    Board.create(user_id: current_user.id)
-  end
   def get_ids
 
     # return @fate
