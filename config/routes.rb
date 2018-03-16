@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'match/index', to: 'match#index'
   get 'users/show', to: 'users#show'
+
+  post 'board/confirmation'
 end
 
 #devise_for :users, controllers: {

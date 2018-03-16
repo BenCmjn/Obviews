@@ -8,21 +8,19 @@
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
+      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
     </div>
   </div>
   <div class="picture">
-<img class="img-fluid"
-    src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"
-    alt="Profil Picture">
+    <%= image_tag @candidate_1.avatar.url(:preview), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= User.find(@candidate_1_id).firstname %> <%= User.find(@candidate_1_id).lastname %></span>
+      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
@@ -31,9 +29,16 @@
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
+<<<<<<< HEAD
   <%= link_to users_show_path do %>
     <%= image_tag "super1.jpg", class: "circle-image" %>
   <% end %>
+=======
+    <%= link_to users_show_path(current_user) do %>
+      <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
+    <% end %>
+    
+>>>>>>> 84b4c3f6f1e05bbe3a52607a8dc79bd797a3f2ea
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <button type="button" class="btn btn-light">Next</button>
 </div>
@@ -47,7 +52,7 @@
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= User.find(@candidate_2_id).firstname %> <%= User.find(@candidate_2_id).lastname %></span>
+      <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
 
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
@@ -55,14 +60,12 @@
     </div>
   </div>
   <div class="picture">
-<img class="img-fluid"
-    src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"
-    alt="Profil Picture">
+    <%= image_tag @candidate_2.avatar.url(:preview), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= User.find(@candidate_2_id).firstname %> <%= User.find(@candidate_2_id).lastname %></span>
+      <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons active">lock</i>
