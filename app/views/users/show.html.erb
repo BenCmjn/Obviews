@@ -1,6 +1,6 @@
 <div class="container container-my-profile">
     <div class= "my-profile">
-      <div class="my-bio">
+      <div class="my-bio behind">
         <p class="bio-description-self">
           <%= current_user.bio %>
         </p>
@@ -11,13 +11,13 @@
             <% end %>
         </div>
       </div>
-      <div class="picture-self">
+      <div class="picture-self ahead">
         <%= image_tag current_user.avatar.url(:original), class: "img-fluid"  %>
         <div class="action-bar">
           <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
-            <a><%= link_to "Edit", edit_user_registration_path %>
+            <%= link_to edit_user_registration_path do %>
               <i class="material-icons material-icons-edit" style="font-size: 30px">mode_edit</i>
-            </a>
+              <% end %>
         </div>
       </div>
     </div>
