@@ -17,6 +17,7 @@ gem 'sprockets-rails'
 gem 'guard'
 gem 'rspec-rails'
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 group :development, :test do
   gem 'sqlite3'
