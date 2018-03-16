@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="picture-self">
-        <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
+        <%= image_tag current_user.avatar.url(:original), class: "img-fluid"  %>
         <div class="action-bar">
           <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
             <a><%= link_to "Edit", edit_user_registration_path %>
