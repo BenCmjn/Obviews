@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'board/new'
 
-  get 'board/index'
+  get 'board/index', to: 'board#index'
 
   get 'board/create', to: 'board#create'
 

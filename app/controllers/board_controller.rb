@@ -1,13 +1,11 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
-  before_filter :set_admin
+  before_action :show
+  
   def get_ids
-
-  	# return @fate
   end
 
   def index
-    
   end
 
   def show
@@ -22,9 +20,10 @@ class BoardController < ApplicationController
 
     @candidate_1 = User.find(@result[0])
     @candidate_2 = User.find(@result[1])
+  end
 
-    def next
-    end
+  def next
+    byebug
   end
 
   def share
