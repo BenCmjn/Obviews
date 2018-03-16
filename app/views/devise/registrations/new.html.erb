@@ -1,44 +1,44 @@
 <div class="container container-registration">
 
-<h4>Obviews!</h4>
+  <h4>Obviews!</h4>
 
+  <!-- FORM BEGINNING -->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
+        </div>
 
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"Email",class: "field1" %>
-  </div>
+        <div class="field">
+          <%= f.text_field :firstname, placeholder:"Prenom",class: "field1" %>
+        </div>
 
-  <div class="field">
+        <div class="field">
+          <%= f.text_field :lastname, placeholder:"Nom de famille",class: "field1" %>
+        </div>
 
-    <%= f.text_field :firstname, placeholder:"Prenom",class: "field1" %>
-  </div>
+        <div class="field">
+          <%= f.text_field :bio, autocomplete: "off", placeholder:"Présente toi en quelques mots",class: "field1" %>
+        </div>
 
-<div class="field">
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off",placeholder:"Password (6 chars min)",class: "field1" %>
+        </div>
 
-    <%= f.text_field :lastname, placeholder:"Nom de famille",class: "field1" %>
-  </div>
-  <div class="field">
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation",class: "field1" %>
+        </div>
 
+        <div class="field">
+          <%= f.file_field :avatar,class: "field1" %>
+        </div>
 
-    <%= f.password_field :password, autocomplete: "off",placeholder:"Password (6 chars min)",class: "field1" %>
-  </div>
-
-  <div class="field">
-
-    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Password Confirmation",class: "field1" %>
-  </div>
-
-  <div class="field">
-    <%= f.file_field :avatar,class: "field1" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "S'INSCRIRE" %>
-  </div>
-  <% end %>
+        <div class="actions">
+          <%= f.submit "S'INSCRIRE" %>
+        </div>
+    <% end %>
 
   <div class= "action_link">
   <%= link_to "Déjà inscrit ?", new_user_session_path, class: "login" %>

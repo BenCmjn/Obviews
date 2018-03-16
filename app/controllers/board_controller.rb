@@ -5,7 +5,7 @@ class BoardController < ApplicationController
   end
   def get_ids
 
-    # return @fate
+  	# return @fate
   end
 
   def index
@@ -29,7 +29,7 @@ class BoardController < ApplicationController
     @board = Board.where(user_id: current_user.id)
     @user1 = User.find(@board.user_id) #finds
   end
-  
+
   private
   def body_params
     params.require(:board).permit(:content)
