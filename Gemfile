@@ -17,8 +17,10 @@ gem 'sprockets-rails'
 gem 'guard'
 gem 'rspec-rails'
 gem 'paperclip'
+gem 'mailjet'
 
 group :development, :test do
+
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'pry-rails'
