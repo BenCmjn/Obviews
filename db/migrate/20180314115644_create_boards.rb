@@ -3,7 +3,7 @@ class CreateBoards < ActiveRecord::Migration[5.1]
     create_table :boards do |t|
       t.integer :candidate_1_id
       t.integer :candidate_2_id
-      t.integer :lock
+      t.integer :lock, default: 0
       t.text :candidate_1_picture
       t.string :candidate_1_firstname
       t.string :candidate_1_lastname
