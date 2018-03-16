@@ -34,7 +34,7 @@
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
 
-    <%= link_to "board/confirmation" do %>
+    <%= link_to board_confirmation_path do %>
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <% end %>
     
