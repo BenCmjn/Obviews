@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'board/new'
 
   get 'board/index'
+
   get 'board/create', to: 'board#create'
 
   get 'board/share', to: 'board#share'
