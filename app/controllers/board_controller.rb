@@ -27,7 +27,7 @@ class BoardController < ApplicationController
   def next
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
     archivedboard.users=[@candidate_1, @candidate_2]
-    archivedboard.lock = @lock
+    #archivedboard.lock = @lock
     archivedboard.is_match = false
     archivedboard.save
     redirect_to board_show_path
