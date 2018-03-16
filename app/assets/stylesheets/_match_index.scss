@@ -2,13 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container-match-index i {
+  color: white;
+  font-size: 30px;
+}
+
+.container-match-index {
+  display: flex;
+  flex-direction: row;
+  h1 {
+      font-family: "Kalam";
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+  }
+}
+
 /* Style the tab */
 
 .tab {
     overflow: hidden;
     background-color: black;
 }
-
 
 /* Style the buttons that are used to open the tab content */
 
@@ -78,13 +93,6 @@
 
 /* TEXTS */
 
-h1 {
-    font-family: "Kalam";
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-}
 
 .match-div {
     border: 1px solid white;

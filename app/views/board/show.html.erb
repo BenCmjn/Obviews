@@ -2,7 +2,7 @@
 <div class= "candidate_1">
   <div class="bio">
     <p class="bio_description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
+      <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
       <i class="fav material-icons">star_border</i>
@@ -29,10 +29,11 @@
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
+
     <%= link_to users_show_path(current_user) do %>
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
-    
+
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     
     <%= link_to board_show_path(current_user) do %>
@@ -44,7 +45,7 @@
 <div class= "candidate_2">
   <div class="bio">
     <p class="bio_description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis dolores totam harum laboriosam dolorem in tempore sapiente porro veritatis eaque, esse corporis ut deserunt qui saepe delectus deleniti, ab magnam.
+      <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
