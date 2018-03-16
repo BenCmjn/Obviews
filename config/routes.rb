@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'
+
+  get 'board/next', to: 'board#next', as: 'next'
 end
 
 #devise_for :users, controllers: {

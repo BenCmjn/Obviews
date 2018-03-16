@@ -39,6 +39,8 @@
     <%= link_to board_show_path(current_user) do %>
       <button type="button" class="btn btn-light">Next</button>
     <% end %>
+
+    <%= button_to 'Press me', next_path(@candidate_1, @candidate_2), method: :get %>
     
 </div>
 <!-- BOTTOM CONTAINER -->

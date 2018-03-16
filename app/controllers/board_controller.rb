@@ -1,5 +1,6 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
+  before_filter :set_admin
   def get_ids
 
   	# return @fate
@@ -21,6 +22,9 @@ class BoardController < ApplicationController
 
     @candidate_1 = User.find(@result[0])
     @candidate_2 = User.find(@result[1])
+
+    def next
+    end
   end
 
   def share
