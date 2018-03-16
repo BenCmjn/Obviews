@@ -1,5 +1,8 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
+  def create
+    Board.create(user_id: current_user.id)
+  end
   def get_ids
 
     # return @fate
@@ -12,7 +15,7 @@ class BoardController < ApplicationController
       @fate = ids.shuffle[0..1]   # On met ca dans une variable, puis on shuffle cette variable (on sort 2 valeurs au hasard de l'array)
       return @fate
     end # Return two random differents user ids, without the current_user one.
-    @board = Board.find(current_user.id)
+    @board = Board.where(user_id: current_user.id)
     @result = randomizer
 
     @candidate_1 = User.find(@result[0])
@@ -23,7 +26,7 @@ class BoardController < ApplicationController
   end
 
   def confirmation
-    @board = Board.find(current_user.id) #finds current board
+    @board = Board.where(user_id: current_user.id)
     @user1 = User.find(@board.user_id) #finds
   end
   
