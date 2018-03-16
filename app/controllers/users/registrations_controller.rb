@@ -5,6 +5,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
+
+
   # def new
   #   super
   # end
@@ -19,6 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         set_flash_message! :notice, :signed_up
         sign_up(resource_name, resource)
         respond_with resource, location: after_sign_up_path_for(resource)
+        puts "envoie de l'email"
         UserMailer.welcome_email(current_user.email).deliver_now!
       else
         set_flash_message! :notice, :"signed_up_but_#{resource.inactive_message}"

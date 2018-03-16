@@ -6,3 +6,4 @@ class UserMailer < ApplicationMailer
           subject: "Bienvenue chez Obviews!"
           )
 end
+end
