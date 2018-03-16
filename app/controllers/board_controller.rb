@@ -27,6 +27,12 @@ class BoardController < ApplicationController
   end
 
   def confirmation
+    @board = Board.find(current_user.id) #finds current board
+    @user1 = User.find(@board.user_id) #finds
   end
-
+  
+  private
+  def body_params
+    params.require(:board).permit(:content)
+  end
 end
