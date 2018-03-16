@@ -1,8 +1,5 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
-  def create
-    Board.create(user_id: current_user.id)
-  end
   def get_ids
 
   	# return @fate
@@ -26,8 +23,8 @@ class BoardController < ApplicationController
   end
 
   def confirmation
-    @board = Board.where(user_id: current_user.id)
-    @user1 = User.find(@board.user_id) #finds
+    @board = Board.find(current_user.board_ids.first)
+    @user1 = current_user #finds
   end
 
   private
