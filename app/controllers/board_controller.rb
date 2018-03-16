@@ -24,19 +24,30 @@ class BoardController < ApplicationController
   end
 
   def next
-    aboard = ArchivedBoard.create(user_id: current_user.id)
-    aboard.users=[@candidate_1, @candidate_2]
-    aboard.lock = @lock
-    aboard.save
-    byebug
-  end
-
-  def share
+    archivedboard = ArchivedBoard.create(user_id: current_user.id)
+    archivedboard.users=[@candidate_1, @candidate_2]
+    archivedboard.lock = @lock
+    archivedboard.save
+    redirect_to board_show_path
   end
 
   def confirmation
-    @board = Board.find(current_user.board_ids.first)
-    @user1 = current_user #finds
+  end
+
+  def match
+    matchboard = ArchivedBoard.create(user_id: current_user.id)
+    matchboard.users=[@candidate_1, @candidate_2]
+    matchboard.lock = @lock
+    matchboard.save
+
+    archivedboard = ArchivedBoard.create(user_id: current_user.id)
+    archivedboard.users=[@candidate_1, @candidate_2]
+    archivedboard.lock = @lock
+    archivedboard.is_match = true
+    archivedboard.save
+  end  
+
+  def share
   end
 
   private

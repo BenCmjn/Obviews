@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   post 'board/confirmation'
 
   get 'board/next', to: 'board#next', as: 'next'
+  get 'board/match', to: 'board#match', as: 'match'
 end
 
 #devise_for :users, controllers: {
