@@ -34,22 +34,23 @@ class BoardController < ApplicationController
   end
 
   def confirmation
-    @intro = params[:intro] #this is the text you enter in the field thats a justification of the match
+    #@intro = params[:intro] #this is the text you enter in the field thats a justification of the match
   end
 
   def match
-    matchboard = ArchivedBoard.create(user_id: current_user.id)
+    matchboard = Match.create(user_id: current_user.id)
     matchboard.users=[@candidate_1, @candidate_2]
     matchboard.lock = @lock
-    matchboard.intro = @intro
+    #matchboard.intro = @intro
     matchboard.save
 
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
     archivedboard.users=[@candidate_1, @candidate_2]
     archivedboard.lock = @lock
     archivedboard.is_match = true
-    archivedboard.intro = @intro
+    #archivedboard.intro = @intro
     archivedboard.save
+    redirect_to board_show_path
   end  
 
   def share

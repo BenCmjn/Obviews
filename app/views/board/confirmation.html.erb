@@ -23,6 +23,7 @@
       <%= @candidate_1.firstname %> & <%= @candidate_2.firstname %>...
     </div>
 
+<!--
     <div class="input-area">
 
       <%= form_tag("/board/confirmation") do %>
@@ -31,13 +32,14 @@
         <% @intro = params[:intro] %>
       <% end %>
     </div>
-
-<!--     <div class="CTA_button">
+    <div class="CTA_button">
           <a href='#'>ENVOIE !</a>
-    </div> -->
-
+    </div> 
     <%= mail_to "#{@candidate_1.email}", "ENVOI", subject: "Vous avez matché avec #{@candidate_2.firstname} !", body:"#{@intro}" %>
-
+-->    
+    <%= link_to match_path do %>
+    <button type="button" class="btn btn-outline-danger">Valider</button>
+    <% end %>
     <div class="action_link">
           <a href='board/show'>Annuler</a>
     </div>
