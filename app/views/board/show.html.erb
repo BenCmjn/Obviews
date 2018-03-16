@@ -1,6 +1,6 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
-  <div class="bio">
+  <div class="bio behind">
     <p class="bio_description">
       <%= @candidate_1.bio %>
     </p>
@@ -14,7 +14,7 @@
       <!-- <i class="lock material-icons active">lock</i> -->
     </div>
   </div>
-  <div class="picture" id="defaultFront">
+  <div class="picture ahead">
     <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
@@ -43,7 +43,7 @@
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
-  <div class="bio">
+  <div class="bio behind">
     <p class="bio_description">
       <%= @candidate_2.bio %>
     </p>
@@ -58,7 +58,7 @@
       <i class="lock material-icons active">lock</i>
     </div>
   </div>
-  <div class="picture">
+  <div class="picture ahead">
     <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
