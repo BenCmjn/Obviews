@@ -10,12 +10,14 @@ Devise.setup do |config|
   # config.secret_key = '962af5a42d158f6cc02c277f8b281d8bc29e181bc54aade5d37458ac061107006420cdd12c45fc93d102b7382c004549f63b4db4b4529119a032a3e4957a8f7a'
 
   Warden::Manager.after_set_user do |current_user,auth,opts|
+    redirect_to randomizers_reset
     if current_user.board_ids == []
       current_user.boards << Board.create(user_id: current_user.id)
       current_user.save
     end
   end
   Warden::Manager.after_authentication do |current_user,auth,opts|
+    redirect_to randomizers_reset
     if current_user.board_ids == []
       current_user.boards << Board.create(user_id: current_user.id)
       current_user.save
