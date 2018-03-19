@@ -1,6 +1,6 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
-  before_action :reset, :randomizer
+  before_action :confirmation, :get_candidate_ids
   
   def get_ids
   end
@@ -15,27 +15,29 @@ class BoardController < ApplicationController
   def index
   end
 
-  def reset
-    @lock = 0 # TO DELETE WHEN NEEDED!!!!
-    result = randomizer
-    swapper = result
-    @board = Board.find(current_user.board_ids.first)
-
-    @candidate_1 = User.find(swapper[0])
-    @candidate_2 = User.find(swapper[1])
+  def show
+    if current_user.first_time == true
+      cu = current_user
+      cu.first_time = false
+      cu.save
+      redirect_to randomizers_reset_path
+    end
   end
 
-  def show
+  def get_candidate_ids
+    @candidate_1 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[0][1..-1])
+    @candidate_2 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[1][1..-2])
+    @candidate_ids = [@candidate_1, @candidate_2]
   end
 
   def next
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
-    archivedboard.users=[@candidate_1, @candidate_2]
+    archivedboard.users=@candidate_ids
     #archivedboard.lock = @lock
     archivedboard.is_match = false
     archivedboard.save
-    @should_i_reset = true
-    redirect_to board_show_path
+    redirect_to randomizers_reset_path
+    # redirect_to board_show_path
   end
 
   def confirmation
@@ -44,19 +46,18 @@ class BoardController < ApplicationController
 
   def match
     matchboard = Match.create(user_id: current_user.id)
-    matchboard.users=[@candidate_1, @candidate_2]
+    matchboard.users=@candidate_ids
     matchboard.lock = @lock
     #matchboard.intro = @intro
     matchboard.save
 
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
-    archivedboard.users=[@candidate_1, @candidate_2]
+    archivedboard.users=@candidate_ids
     archivedboard.lock = @lock
     archivedboard.is_match = true
     #archivedboard.intro = @intro
     archivedboard.save
-    @should_i_reset = true
-    redirect_to board_show_path
+    redirect_to randomizers_reset_path
   end  
 
   def share
