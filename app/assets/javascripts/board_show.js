@@ -1,10 +1,10 @@
 $(document).ready(function() {
     $(".candidate_1 #click-frame-pix").click(function(e) {
         if (e.target.id == "click-frame-pix") {
-            console.log("FRAME clicked !");
+            console.log("PIX 1 clicked !");
 
-            $(this).removeClass('ahead');
-            $(this).addClass('behind');
+            $(".candidate_1 .picture").removeClass('ahead');
+            $(".candidate_1 .picture").addClass('behind');
 
             $(".candidate_1 .bio").removeClass('behind');
             $(".candidate_1 .bio").addClass('ahead');
@@ -12,15 +12,16 @@ $(document).ready(function() {
     });
     $(".candidate_1 #click-frame-bio").click(function(e) {
         if (e.target.id == "click-frame-bio") {
-            console.log("FRAME clicked !");
+            console.log("BIO 1 clicked !");
 
-            $(this).removeClass('ahead');
-            $(this).addClass('behind');
+            $(".candidate_1 .bio").removeClass('ahead');
+            $(".candidate_1 .bio").addClass('behind');
 
             $(".candidate_1 .picture").removeClass('behind');
             $(".candidate_1 .picture").addClass('ahead');
         }
     });
+
     $(".candidate_1 .lock").click(function() {
         if($(".candidate_1 .lock").hasClass('active')){
             $(".candidate_1 .lock").removeClass('active')
@@ -42,10 +43,10 @@ $(document).ready(function() {
 //------------------------------------------------------
     $(".candidate_2 #click-frame-pix").click(function(f) {
         if (f.target.id == "click-frame-pix") {
-            console.log("FRAME clicked !");
+            console.log("PIX 2 clicked !");
 
-            $(this).removeClass('ahead');
-            $(this).addClass('behind');
+            $(".candidate_2 .picture").removeClass('ahead');
+            $(".candidate_2 .picture").addClass('behind');
 
             $(".candidate_2 .bio").removeClass('behind');
             $(".candidate_2 .bio").addClass('ahead');
@@ -53,15 +54,16 @@ $(document).ready(function() {
     });
     $(".candidate_2 #click-frame-bio").click(function(f) {
         if (f.target.id == "click-frame-bio") {
-            console.log("FRAME clicked !");
+            console.log("BIO 2 clicked !");
 
-            $(this).removeClass('ahead');
-            $(this).addClass('behind');
+            $(".candidate_2 .bio").removeClass('ahead');
+            $(".candidate_2 .bio").addClass('behind');
 
             $(".candidate_2 .picture").removeClass('behind');
             $(".candidate_2 .picture").addClass('ahead');
         }
     });
+
     $(".candidate_2 .lock").click(function() {
         if($(".candidate_2 .lock").hasClass('active')){
             $(".candidate_2 .lock").removeClass('active')

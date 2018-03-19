@@ -1,8 +1,9 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
-  <div class="bio behind" id="click-frame-bio">
-    <p class="bio_description">
+  <div class="bio behind">
+    <p class="bio-description" id="click-frame-bio">
       <%= @candidate_1.bio %>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis pariatur libero, ipsa laborum, debitis excepturi porro nemo dolorum labore voluptatum delectus! Sed incidunt dolorem ducimus atque nobis quidem enim quaerat.
     </p>
     <div class="action-bar">
       <i class="fav material-icons">star</i>
@@ -13,7 +14,7 @@
     </div>
   </div>
   <div class="picture ahead" id="click-frame-pix">
-    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
+    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
     
     <div class="action-bar">
       <i class="fav material-icons">star</i>
@@ -44,9 +45,10 @@
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
-  <div class="bio behind" id="click-frame-bio">
-    <p class="bio_description">
+  <div class="bio behind">
+    <p class="bio-description" id="click-frame-bio">
       <%= @candidate_2.bio %>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus eaque pariatur sunt doloribus, deleniti error porro distinctio quod, cum tempore mollitia. Maiores recusandae dolorum itaque rerum repellat ex laborum! Quidem!
     </p>
     <div class="action-bar">
       <i class="fav material-icons">star</i>
@@ -56,8 +58,8 @@
       <i class="lock material-icons">lock</i>
     </div>
   </div>
-  <div class="picture ahead" id="click-frame-pix">
-    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
+  <div class="picture ahead">
+    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
     <div class="action-bar">
       <i class="fav material-icons">star</i>
       <!--^ Activer si le user clique sur cette div -->
