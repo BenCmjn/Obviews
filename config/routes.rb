@@ -15,13 +15,19 @@ Rails.application.routes.draw do
   get 'board/share', to: 'board#share'
   get 'board/confirmation', to: 'board#confirmation'
   post '/users/show'
-  devise_for :users
+  devise_for :users, controllers: {
+           :sessions => "users/sessions",
+           :registrations => "users/registrations" }
+
+
+  
   get 'match/index', to: 'match#index'
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'
 
   get 'board/next', to: 'board#next', as: 'next'
+  get 'board/match', to: 'board#match', as: 'match'
 end
 
 #devise_for :users, controllers: {
