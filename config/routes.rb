@@ -20,8 +20,10 @@ Rails.application.routes.draw do
            :registrations => "users/registrations" }
 
 
-  
+
   get 'match/index', to: 'match#index'
+  get 'match/show', to: 'match#show'
+  
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'

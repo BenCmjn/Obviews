@@ -36,4 +36,9 @@ $(document).ready(function() {
         $(".candidate_2 .picture").removeClass('behind');
         $(".candidate_2 .picture").addClass('ahead');
     });
+
+    $(".candidate_1 .picture .lock").click(function(){
+        console.log("Click sur lock !");
+
+    });
 });
