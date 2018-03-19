@@ -16,15 +16,15 @@ class BoardController < ApplicationController
   end
 
   def show
+  end
+
+  def get_candidate_ids
     if current_user.first_time == true
       cu = current_user
       cu.first_time = false
       cu.save
       redirect_to randomizers_reset_path
     end
-  end
-
-  def get_candidate_ids
     @candidate_1 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[0][1..-1])
     @candidate_2 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[1][1..-2])
     @candidate_ids = [@candidate_1, @candidate_2]
