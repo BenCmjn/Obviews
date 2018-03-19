@@ -57,6 +57,7 @@ class BoardController < ApplicationController
     archivedboard.is_match = true
     #archivedboard.intro = @intro
     archivedboard.save
+    UserMailer.match_maker(current_user).deliver_now!
     redirect_to randomizers_reset_path
   end  
 
