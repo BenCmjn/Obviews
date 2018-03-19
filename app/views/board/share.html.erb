@@ -10,7 +10,7 @@
 
     <div class="CTA_button fb-share-button" data-href="https://obviews-dev.herokuapp.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fobviews-dev.herokuapp.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Partager</a></div>
 
-    <div class="action_link">
-        <a href='/board/index' >Pas maintenant</a>
-    </div>
+    <%= link_to next_path, type:"button", class:"action_link", method: :get do %>
+      <span class="action_link">Pas maintenant</span>
+    <% end %>
 </div>
