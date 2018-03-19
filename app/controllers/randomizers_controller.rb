@@ -24,7 +24,6 @@ class RandomizersController < ApplicationController
         fate[1] = @c2id
         File.open('tmp_current_candidates_ids.txt', 'w') { |file| file.write(fate) }
       end # Return two random differents user ids, without the current_user one.	
-      
       redirect_to root_path
     end
 end

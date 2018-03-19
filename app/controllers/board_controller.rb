@@ -27,12 +27,15 @@ class BoardController < ApplicationController
     end
     @candidate_1 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[0][1..-1])
     @candidate_2 = User.find(File.read("tmp_current_candidates_ids.txt").split(',')[1][1..-2])
-    @candidate_ids = [@candidate_1, @candidate_2]
+    @candidate_ids = [@candidate_1.id, @candidate_2.id]
+    if @candidate_ids.include?(current_user.id)
+      redirect_to randomizers_reset_path
+    end
   end
 
   def next
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
-    archivedboard.users=@candidate_ids
+    archivedboard.users=[@candidate_1, @candidate_2]
     #archivedboard.lock = @lock
     archivedboard.is_match = false
     archivedboard.save
@@ -46,13 +49,13 @@ class BoardController < ApplicationController
 
   def match
     matchboard = Match.create(user_id: current_user.id)
-    matchboard.users=@candidate_ids
+    matchboard.users=[@candidate_1, @candidate_2]
     matchboard.lock = @lock
     #matchboard.intro = @intro
     matchboard.save
 
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
-    archivedboard.users=@candidate_ids
+    archivedboard.users=[@candidate_1, @candidate_2]
     archivedboard.lock = @lock
     archivedboard.is_match = true
     #archivedboard.intro = @intro
