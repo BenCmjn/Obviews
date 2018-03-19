@@ -1,7 +1,6 @@
 class BoardController < ApplicationController
   before_action :authenticate_user!
-  before_action :show
-  before_action :confirmation
+  before_action :confirmation, :results
   
   def get_ids
   end
@@ -9,7 +8,7 @@ class BoardController < ApplicationController
   def index
   end
 
-  def show
+  def results
     def randomizer
       ids = User.pluck(:id)       # User.pluck(:champ) va chercher toutes les instances de :champ dans la table User, puis le transforme en array
       ids.delete_if {|id| id == current_user.id } # Ne jamais être soi-même dans les propositions…
@@ -22,6 +21,9 @@ class BoardController < ApplicationController
 
     @candidate_1 = User.find(@result[0])
     @candidate_2 = User.find(@result[1])
+  end
+
+  def show
   end
 
   def next
