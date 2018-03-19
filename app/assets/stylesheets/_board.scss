@@ -1,4 +1,5 @@
 .candidate_1 {
+    cursor: pointer;
     width: 100%;
     margin: auto;
     border: 1px dotted #333;
@@ -7,6 +8,12 @@
     height: 300px;
     background-color: black;
     color: white;
+    #click-frame-pix{
+        background-color: rgba(255,0,0,.9);
+    }
+    #click-frame-bio{
+        background-color: rgba(0,255,0,.9);
+    }
     .bio {
         box-sizing: border-box;
         position: absolute;
@@ -69,12 +76,8 @@
             font-size: 2em;
         }
         .lock {
-
             margin-right: 5%;
             font-size: 2em;
-        }
-        .material-icons.active {
-            color: #F2C94C;
         }
     }
 }
@@ -90,6 +93,7 @@
 
 //--------------------------------------------------------------------------------------
 .candidate_2 {
+    cursor: pointer;
     width: 100%;
     margin: auto;
     border: 1px dotted #333;
@@ -164,11 +168,14 @@
             margin-right: 5%;
             font-size: 2em;
         }
-        .material-icons.active {
-            color: #F2C94C;
-        }
     }
 }
+.material-icons{
+            opacity: .5
+        }
+        .material-icons.active {
+            opacity: 1
+        }
 
 //------------------------------------------------------------------------
 // Le reste.. on le garde au cas où, jusqu'à nouvel ordre.
