@@ -1,29 +1,26 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
-  <div class="bio behind">
+  <div class="bio behind" id="click-frame-bio">
     <p class="bio_description">
       <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star_border</i>
-      <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="fav material-icons active">star</i> -->
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <i class="lock material-icons">lock_open</i>
       <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
-  <div class="picture ahead">
+  <div class="picture ahead" id="click-frame-pix">
     <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
+    
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
 </div>
@@ -47,31 +44,26 @@
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
-  <div class="bio behind">
+  <div class="bio behind" id="click-frame-bio">
     <p class="bio_description">
       <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
-  <div class="picture ahead">
+  <div class="picture ahead" id="click-frame-pix">
     <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
 </div>
