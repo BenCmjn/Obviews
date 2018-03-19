@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   get 'board/next', to: 'board#next', as: 'next'
   get 'board/match', to: 'board#match', as: 'match'
+  get 'randomizers/reset', to: 'randomizers#reset'
 end
 
 #devise_for :users, controllers: {
