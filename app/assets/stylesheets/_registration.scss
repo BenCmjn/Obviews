@@ -1,3 +1,5 @@
+// NEW & EDIT
+
 .container-registration {
   display: flex;
   flex-direction: column;
@@ -8,11 +10,16 @@
   color:white;
 }
 
-.picture-edit{
-  img{
-    width: 100%;
-    border: 1px solid white;
-  }
+.container-registration h1 {
+  font-family: "Kalam";
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  writing-mode: lr-tb;
 }
 
 .field {
@@ -22,19 +29,8 @@
   border-color: white;
 }
 
-.actions{
-  background-color: #38FC8C;
-  font-family: "Kalam";
-  font-size: 26px;
-  color: black;
-  letter-spacing: 2px;
-  padding: 10px 50px;
-  border-radius: 2px;
-  margin: 30px 10px;
-}
-
 .field1 {
-border: 1px solid white;
+  border: 1px solid white;
   background-color: inherit;
   color: rgba(255, 255, 255, 0.5);
   width: 94%;
@@ -47,18 +43,15 @@ border: 1px solid white;
   outline-color: #F2C94C;
 }
 
-.container-registration h1 {
-
+.actions {
+  background-color: #38FC8C;
   font-family: "Kalam";
-  font-weight: bold;
-  color: white;
-  font-size: 24px;
-
-  -webkit-transform: rotate(-4deg);
-  -moz-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
-  writing-mode: lr-tb;
-
+  font-size: 26px;
+  color: black;
+  letter-spacing: 2px;
+  padding: 10px 50px;
+  border-radius: 2px;
+  margin: 30px 10px;
 }
 
 input[type=submit] {
@@ -69,8 +62,21 @@ input[type=submit] {
     font-weight: bold;
 }
 
-.white-text{
-  font-family: "Open sans";
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+#form_part2 {
+  display: none;
 }
+
+// EDIT
+
+.picture-edit{
+  img{
+    width: 100%;
+    border: 1px solid white;
+  }
+}
+
+// .white-text{
+//   font-family: "Open sans";
+//   font-size: 15px;
+//   color: rgba(255, 255, 255, 0.5);
+// }
