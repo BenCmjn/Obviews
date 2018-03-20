@@ -5,22 +5,22 @@
       <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
+      <i class="fav material-icons inactive">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <i class="lock material-icons inactive">lock</i>
     </div>
   </div>
   <div class="picture ahead">
     <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
     
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
+      <i class="fav material-icons inactive">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <i class="lock material-icons inactive">lock</i>
     </div>
   </div>
 </div>
@@ -50,21 +50,21 @@
       <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
+      <i class="fav material-icons inactive">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <i class="lock material-icons inactive">lock</i>
     </div>
   </div>
   <div class="picture ahead">
     <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
+      <i class="fav material-icons inactive">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <i class="lock material-icons inactive">lock</i>
     </div>
   </div>
 </div>
