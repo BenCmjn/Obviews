@@ -9989,38 +9989,45 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  z-index: 0;
   display: flex;
 }
-/* line 21, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 19, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .bio .bio-description p {
   width: 100%;
   text-align: center;
   font-style: italic;
 }
-/* line 28, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 26, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_1 .behind {
+  margin: 0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  z-index: 0;
+}
+/* line 32, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .picture {
   position: absolute;
   box-sizing: border-box;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
   text-align: center;
-  margin: 8px 0 0 8px;
-  z-index: 1;
   overflow: hidden;
   display: flex;
 }
-/* line 40, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 42, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .picture img {
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
 }
-/* line 45, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 47, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_1 .ahead {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 8px 0 0 8px;
+  z-index: 1;
+}
+/* line 54, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10033,22 +10040,22 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 58, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 67, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar .fav {
   margin-left: 5%;
   font-size: 2em;
 }
-/* line 62, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 71, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar .lock {
   margin-right: 5%;
   font-size: 2em;
 }
-/* line 67, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 76, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar .material-icons.active {
   color: #F2C94C;
 }
 
-/* line 73, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 83, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .middle-container {
   width: 267px;
   clear: both;
@@ -10057,7 +10064,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: bold;
 }
 
-/* line 81, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 92, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 {
   width: 100%;
   margin: auto;
@@ -10068,45 +10075,52 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: black;
   color: white;
 }
-/* line 90, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 101, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .bio {
   box-sizing: border-box;
   position: absolute;
   text-align: center;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  z-index: 0;
   display: flex;
 }
-/* line 101, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 110, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .bio .bio-description p {
   width: 100%;
   text-align: center;
   font-style: italic;
 }
-/* line 108, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 117, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_2 .behind {
+  margin: 0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  z-index: 0;
+}
+/* line 123, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .picture {
   position: absolute;
   box-sizing: border-box;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
   text-align: center;
-  margin: 8px 0 0 8px;
-  z-index: 1;
   overflow: hidden;
   display: flex;
 }
-/* line 120, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 133, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .picture img {
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
 }
-/* line 125, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 138, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_2 .ahead {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 8px 0 0 8px;
+  z-index: 1;
+}
+/* line 145, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10119,28 +10133,28 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 138, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 158, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar .fav {
   margin-left: 5%;
   font-size: 2em;
 }
-/* line 142, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 162, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar .lock {
   margin-right: 5%;
   font-size: 2em;
 }
-/* line 147, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 167, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar .material-icons.active {
   color: #F2C94C;
 }
 
-/* line 154, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 175, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .circle-image {
   border-radius: 50%;
   width: 40px;
 }
 
-/* line 159, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 180, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .btn-outline-danger {
   justify-content: center;
   margin-left: 20px;
@@ -10150,7 +10164,7 @@ a.text-dark:hover, a.text-dark:focus {
   border-color: #38FC8C;
 }
 
-/* line 168, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+/* line 189, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
 .btn-light {
   color: #F2C94C;
 }
@@ -10571,13 +10585,18 @@ input[type=submit] {
   text-align: center;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  z-index: 2;
   display: flex;
 }
 
-/* line 28, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 25, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+.behind {
+  margin: 0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  z-index: 0;
+}
+
+/* line 32, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 p.bio-description-self {
   width: 100%;
   height: 250px;
@@ -10590,17 +10609,13 @@ p.bio-description-self {
   padding-top: 20px;
 }
 
-/* line 40, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 44, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .picture-self {
   position: absolute;
   box-sizing: border-box;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
   text-align: center;
-  margin: 8px 0 0 8px;
-  z-index: 1;
   overflow: hidden;
   display: flex;
 }
@@ -10613,6 +10628,14 @@ p.bio-description-self {
 }
 
 /* line 59, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+.ahead {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 8px 0 0 8px;
+  z-index: 1;
+}
+
+/* line 66, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10625,12 +10648,12 @@ p.bio-description-self {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 72, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 79, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .action-bar .user-name-display {
   margin-left: 10px;
 }
 
-/* line 77, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 84, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .material-icons-edit {
   color: #38FC8C;
   padding-right: 10px;
@@ -10638,7 +10661,7 @@ p.bio-description-self {
   line-height: none;
 }
 
-/* line 85, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 92, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .karma-score {
   color: #F2C94C;
   text-align: center;
@@ -10648,12 +10671,12 @@ p.bio-description-self {
   padding: 10px;
 }
 
-/* line 94, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 101, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .action_link_user-show {
   margin: auto;
 }
 
-/* line 98, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 105, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button {
   border-width: 1.5px;
   border-style: solid;
@@ -10664,14 +10687,14 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px 30px;
 }
-/* line 107, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 114, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button a {
   text-decoration: none;
   color: white;
   font-weight: lighter;
 }
 
-/* line 114, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 121, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button {
   border-color: #38FC8C;
   border-width: 3px;
@@ -10685,7 +10708,7 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px;
 }
-/* line 126, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 133, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button a {
   text-decoration: none;
   color: #38FC8C;

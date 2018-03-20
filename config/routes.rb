@@ -20,13 +20,17 @@ Rails.application.routes.draw do
            :registrations => "users/registrations" }
 
 
-  
+
   get 'match/index', to: 'match#index'
+  get 'match/show', to: 'match#show'
+  
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'
 
   get 'board/next', to: 'board#next', as: 'next'
+  get 'board/match', to: 'board#match', as: 'match'
+  get 'randomizers/reset', to: 'randomizers#reset'
 end
 
 #devise_for :users, controllers: {

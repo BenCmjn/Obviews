@@ -5,8 +5,8 @@
 
     <div class="pictures-confirmation">
       <div class="pix-layer">
-        <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img>
-        <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img>
+      <%= image_tag @candidate_1.avatar.url(:thumb), class: "circle-image" %>
+      <%= image_tag @candidate_2.avatar.url(:thumb), class: "circle-image" %>
       </div>
       <!--
       <div class="circles-layer">
@@ -20,25 +20,27 @@
     </div>
 
     <div class="selected-names">
-      Lorenzo & Anaïs...
+      <%= @candidate_1.firstname %> &amp; <%= @candidate_2.firstname %>…
     </div>
 
+<!--
     <div class="input-area">
 
       <%= form_tag("/board/confirmation") do %>
-        <%= text_field_tag(:content) %>
-        <%= submit_tag("ENVOIE") %>
-        <% @a = params[:content] %>
+        <%= text_field_tag(:intro) %>
+        <%= submit_tag("ENVOI") %>
+        <% @intro = params[:intro] %>
       <% end %>
     </div>
-
-<!--     <div class="CTA_button">
+    <div class="CTA_button">
           <a href='#'>ENVOIE !</a>
-    </div> -->
-
-    <%= mail_to "#{@user1.email}", "ENVOIE !", subject: "Vous avez matché avec #{@user1.firstname} !", body:"#{@a}" %>
+    </div> 
+    <%= mail_to "#{@candidate_1.email}", "ENVOI", subject: "Vous avez matché avec #{@candidate_2.firstname} !", body:"#{@intro}" %>
+-->    
+    <%= link_to 'Valider', match_path, class: "action-button" %>
+    
 
     <div class="action_link">
-          <a href='/board/index'>Annuler</a>
+      <%= link_to "Annuler", board_show_path %>
     </div>
 </div>

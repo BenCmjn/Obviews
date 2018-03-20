@@ -1,6 +1,6 @@
 <div class="container container-my-profile">
     <div class= "my-profile">
-      <div class="my-bio">
+      <div class="my-bio behind">
         <p class="bio-description-self">
           <%= current_user.bio %>
         </p>
@@ -11,13 +11,13 @@
             <% end %>
         </div>
       </div>
-      <div class="picture-self">
+      <div class="picture-self ahead">
         <%= image_tag current_user.avatar.url(:original), class: "img-fluid"  %>
         <div class="action-bar">
           <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
-            <a><%= link_to "Edit", edit_user_registration_path %>
+            <%= link_to edit_user_registration_path do %>
               <i class="material-icons material-icons-edit" style="font-size: 30px">mode_edit</i>
-            </a>
+              <% end %>
         </div>
       </div>
     </div>
@@ -26,15 +26,16 @@
       Karma: 53
     </div>
 
-    <div class="fb-action-button action-button">
-      <a href="/match/index" >Voir mes views</a>
-    </div>
+    
+    <a class="action-button" href="/match/index" >Voir mes views</a>
+    
+
 
 
     <% if user_signed_in? %>
       <li><a><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
     <% end %>
-      <div class="fb-share-button" data-href="https://obviews-dev.herokuapp.com" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fobviews-dev.herokuapp.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Inviter mes amis</a></div>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fobviews-dev.herokuapp.com%2F&layout=button&size=small&mobile_iframe=true&width=73&height=20&appId" width="73" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 
     <div class="action_link action_link_user-show">

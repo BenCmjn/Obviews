@@ -1,41 +1,3 @@
-window.onload = function () {
-                startTab();
-            };
-
-            function startTab() {
-                document.getElementById("defaultOpen").click();
-            }
-
-function openTab(evt, actionName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(actionName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-;
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-;
 /*!
  * jQuery JavaScript Library v3.2.1
  * https://jquery.com/
@@ -28198,18 +28160,44 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 }).call(this);
 $(document).ready(function() {
-    $(".candidate_1").click(function(){
-        console.log("Click")
-        $(".picture").css("z-index", "0");
+    $(".candidate_1 .picture").click(function(){
+        console.log("Click sur picture 1 !");
 
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".candidate_1 .bio").removeClass('behind');
+        $(".candidate_1 .bio").addClass('ahead');
+    });
+    $(".candidate_1 .bio").click(function(){
+        console.log("Click sur bio 1!");
+
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".candidate_1 .picture").removeClass('behind');
+        $(".candidate_1 .picture").addClass('ahead');
+    });
+
+    $(".candidate_2 .picture").click(function(){
+        console.log("Click sur picture 2 !");
+
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".candidate_2 .bio").removeClass('behind');
+        $(".candidate_2 .bio").addClass('ahead');
+    });
+    $(".candidate_2 .bio").click(function(){
+        console.log("Click sur bio 2 !");
+
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".candidate_2 .picture").removeClass('behind');
+        $(".candidate_2 .picture").addClass('ahead');
     });
 });
-
-
-// $('.childDiv').click(function() {
-//   $(this).parent().find('.childDiv').css('background-color', '#ffffff');
-//   $(this).css('background-color', '#ff0000');
-// });
 (function() {
   var context = this;
 
@@ -28824,10 +28812,68 @@ $(document).ready(function() {
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+;
 (function() {
 
 
 }).call(this);
+window.onload = function () {
+                startTab();
+            };
+
+            function startTab() {
+                document.getElementById("defaultOpen").click();
+            }
+
+function openTab(evt, actionName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(actionName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+;
+$(document).ready(function() {
+    $(".my-profile .picture-self").click(function(){
+        console.log("Click sur picture-self !");
+
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".my-profile .my-bio").removeClass('behind');
+        $(".my-profile .my-bio").addClass('ahead');
+    });
+    $(".my-profile .my-bio").click(function(){
+        console.log("Click sur bio 1!");
+
+        $(this).removeClass('ahead');
+        $(this).addClass('behind');
+
+        $(".my-profile .picture-self").removeClass('behind');
+        $(".my-profile .picture-self").addClass('ahead');
+    });
+});
 (function() {
 
 
@@ -28844,8 +28890,6 @@ $(document).ready(function() {
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-
 
 
 

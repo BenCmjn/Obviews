@@ -1,73 +1,70 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
   <div class="bio behind">
-    <p class="bio_description">
+    <p class="bio-description" id="click-frame-bio">
       <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star_border</i>
-      <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="fav material-icons active">star</i> -->
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <i class="lock material-icons">lock_open</i>
       <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
+    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
+    
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
 
-    <%= link_to users_show_path(current_user) do %>
+    <%= link_to users_show_path(current_user), class: "child" do %>
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
 
-    <button type="button" class="btn btn-outline-danger">MATCH</button>
     
-    <%= link_to next_path do %>
-      <button type="button" class="btn btn-light">Next</button>
-    <% end %>
+    <!-- <button type="button" class="btn btn-outline-danger">MATCH</button> -->
+      <div class=" action-button">
+        <%= link_to "MATCH!", board_confirmation_path %>
+      </div>
+    
+    
+    <%= link_to 'Next', next_path, class: "action_link child", method: :get %>
+    
+
 
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
   <div class="bio behind">
-    <p class="bio_description">
+    <p class="bio-description" id="click-frame-bio">
       <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
+    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
+      <i class="fav material-icons">star</i>
+      <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <i class="lock material-icons">lock</i>
     </div>
   </div>
 </div>
