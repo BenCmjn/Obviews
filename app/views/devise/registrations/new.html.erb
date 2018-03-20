@@ -2,28 +2,27 @@
   <h1>Inscris-toi !</h1>
 
   <!-- FORM PART 1 -->
-<div id="form_part1">
+<div id="form_part1" class="form-active">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
         <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email",placeholder:"Email",class: "field1" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email",placeholder:"Email", class: "field1" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe (6 caractères min)",class: "field1" %>
+          <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe (6 caractères min)", class: "field1" %>
         </div>
 
         <div class="field">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmation du mot de passe",class: "field1" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder:"Confirmation du mot de passe", class: "field1" %>
         </div>
 
-        <span class="action_link">Continue</span>
+        <div class="action_link" id="sign-up-next">Continue</div>
   </div>
 
   <!-- FORM PART 2 -->
-  <div id="form_part2">
-
+  <div id="form_part2" class="form-unactive">
         <div class="field">
           <%= f.text_field :firstname, placeholder:"Ton prénom",class: "field1" %>
         </div>
