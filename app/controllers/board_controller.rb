@@ -4,8 +4,13 @@ class BoardController < ApplicationController
   
   def randomizer
     board = current_user.boards.first
-    c1id = board.users.first.id
-    c2id = board.users.last.id
+    if current_user.first_time == true
+      c1id = User.first.id
+      c2id = User.last.id
+    else
+      c1id = board.users.first.id
+      c2id = board.users.last.id
+    end
     lock = current_user.boards.first.lock
 
     case lock
@@ -39,31 +44,31 @@ class BoardController < ApplicationController
       cu.save
       randomizer
     end
-    @board = current_user.boards.first
-    if @board.users.include?(current_user)
+    board = current_user.boards.first
+    if board.users.include?(current_user)
       randomizer
     end
   end
 
   def next
-    archivedboard = ArchivedBoard.create(user_id: @board.user_id)
-    archivedboard.users = @board.users
-    archivedboard.lock = @board.lock
+    archivedboard = ArchivedBoard.create(user_id: board.user_id)
+    archivedboard.users = board.users
+    archivedboard.lock = board.lock
     archivedboard.is_match = false
     archivedboard.save
     randomizer
   end
 
   def match
-    matchboard = Match.create(user_id: @board.user_id)
-    matchboard.users= @board.users
-    matchboard.lock = @board.lock
+    matchboard = Match.create(user_id: board.user_id)
+    matchboard.users= board.users
+    matchboard.lock = board.lock
     #matchboard.intro = params[:intro]
     matchboard.save
 
     archivedboard = ArchivedBoard.create(user_id: current_user.id)
-    archivedboard.users = @board.users
-    archivedboard.lock = @board.lock
+    archivedboard.users = board.users
+    archivedboard.lock = board.lock
     archivedboard.is_match = true
     #archivedboard.intro = params[:intro]
     archivedboard.save
