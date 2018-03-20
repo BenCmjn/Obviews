@@ -14,7 +14,7 @@
   </div>
   <div class="picture ahead">
     <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
-    
+
     <div class="action-bar">
       <i class="fav material-icons">star</i>
       <!--^ Activer si le user clique sur cette div -->
@@ -31,15 +31,15 @@
       <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
 
-    
+
     <!-- <button type="button" class="btn btn-outline-danger">MATCH</button> -->
       <div class=" action-button">
         <%= link_to "MATCH!", board_confirmation_path %>
       </div>
-    
-    
+
+
     <%= link_to 'Next', next_path, class: "action_link child", method: :get %>
-    
+
 
 
 </div>
