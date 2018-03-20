@@ -33,6 +33,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
       set_minimum_password_length
       respond_with resource
     end
+    if current_user.boards == []
+      current_user.boards << Board.create(user_id: current_user.id)
+      current_user.save
+    end
   end
 
   #POST /resource

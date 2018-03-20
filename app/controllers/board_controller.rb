@@ -48,18 +48,23 @@ class BoardController < ApplicationController
     if board.users.include?(current_user)
       randomizer
     end
+    @candidate_1 = board.users.first
+    @candidate_2 = board.users.last
   end
 
   def next
+    board = current_user.boards.first
     archivedboard = ArchivedBoard.create(user_id: board.user_id)
     archivedboard.users = board.users
     archivedboard.lock = board.lock
     archivedboard.is_match = false
     archivedboard.save
     randomizer
+    redirect_to root_path
   end
 
   def match
+    board = current_user.boards.first
     matchboard = Match.create(user_id: board.user_id)
     matchboard.users= board.users
     matchboard.lock = board.lock
@@ -73,6 +78,7 @@ class BoardController < ApplicationController
     #archivedboard.intro = params[:intro]
     archivedboard.save
     randomizer
+    redirect_to root_path
   end  
   
   def confirmation
