@@ -1,30 +1,18 @@
-//
-//
-// window.onload = function () {
-//                 startTab();
-//             };
-//
-//             function startTab() {
-//                 document.getElementById("defaultOpen").click();
-//             }
-//
-// function openTab(evt, actionName) {
-//     // Declare all variables
-//     var i, tabcontent, tablinks;
-//
-//     // Get all elements with class="tabcontent" and hide them
-//     tabcontent = document.getElementsByClassName("tabcontent");
-//     for (i = 0; i < tabcontent.length; i++) {
-//         tabcontent[i].style.display = "none";
-//     }
-//
-//     // Get all elements with class="tablinks" and remove the class "active"
-//     tablinks = document.getElementsByClassName("tablinks");
-//     for (i = 0; i < tablinks.length; i++) {
-//         tablinks[i].className = tablinks[i].className.replace(" active", "");
-//     }
-//
-//     // Show the current tab, and add an "active" class to the button that opened the tab
-//     document.getElementById(actionName).style.display = "block";
-//     evt.currentTarget.className += " active";
-// }
+/* On attend que la page soit prête */
+$( document ).ready(function() {
+
+	/* On surveille les cliques sur les liens du menu */
+	$('.tab-nav .btn-matchmaker').click(function(e){
+    $('.btn-selected').removeClass('tab-nav-active')
+    $('#as-selected').removeClass('tab-active');
+    $('.btn-matchmaker').addClass('tab-nav-active')
+    $('#as-matchmaker').addClass('tab-active');
+  });
+
+  $('.tab-nav .btn-selected').click(function(e){
+    $('.btn-matchmaker').removeClass('tab-nav-active')
+    $('#as-matchmaker').removeClass('tab-active');
+    $('.btn-selected').addClass('tab-nav-active')
+    $('#as-selected').addClass('tab-active');
+  })
+});
