@@ -1,30 +1,29 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
   <div class="bio behind">
-    <p class="bio-description" id="click-frame-bio">
+    <p class="bio_description">
       <%= @candidate_1.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
-      <!--^ Activer si le user clique sur cette div -->
-      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+      <i class="fav material-icons">star_border</i>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <!-- <i class="fav material-icons active">star</i> -->
+      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+      <i class="lock material-icons">lock_open</i>
+      <!-- Activer si le user clique sur cette div -->
+      <!-- <i class="lock material-icons active">lock</i> -->
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
-    
+    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
-      <!--^ Activer si le user clique sur cette div -->
-      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <%= link_to board_show_path do %>
-        <i class="lock material-icons">lock_open</i>
-      <% end %>
+      <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
-      <!-- <i class="lock material-icons">lock</i> -->
+      <i class="fav material-icons active">star</i>
+      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+      <!-- <i class="lock material-icons">lock_open</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="lock material-icons active">lock</i>
     </div>
   </div>
 </div>
@@ -38,7 +37,7 @@
     <%= link_to board_confirmation_path do %>
     <button type="button" class="btn btn-outline-danger">MATCH</button>
     <% end %>
-    
+
 
     <%= link_to next_path, type:"button", class:"action_link", method: :get do %>
     <button type="button" class="action_link">Next</button>
@@ -49,33 +48,30 @@
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
   <div class="bio behind">
-    <p class="bio-description" id="click-frame-bio">
+    <p class="bio_description">
       <%= @candidate_2.bio %>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
-      <!--^ Activer si le user clique sur cette div -->
+      <!-- <i class="fav material-icons">star_border</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="fav material-icons active">star</i>
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
+
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <i class="lock material-icons active">lock</i>
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix"%>
+    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
     <div class="action-bar">
-      <i class="fav material-icons">star</i>
-      <!--^ Activer si le user clique sur cette div -->
+      <!-- <i class="fav material-icons">star_border</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <i class="fav material-icons active">star</i>
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-      <%= link_to board_show_path do %>
-        <i class="lock material-icons">lock_open</i>
-      <% end %>
+      <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons">lock</i> -->
+      <i class="lock material-icons active">lock</i>
     </div>
   </div>
 </div>

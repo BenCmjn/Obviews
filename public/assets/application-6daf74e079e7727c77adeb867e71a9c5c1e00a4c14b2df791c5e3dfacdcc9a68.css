@@ -9973,6 +9973,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 /* line 1, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 {
+  cursor: pointer;
   width: 100%;
   margin: auto;
   border: 1px dotted #333;
@@ -9982,7 +9983,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: black;
   color: white;
 }
-/* line 10, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 17, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .bio {
   box-sizing: border-box;
   position: absolute;
@@ -9991,20 +9992,24 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: black;
   display: flex;
 }
-/* line 19, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
-.candidate_1 .bio .bio-description p {
+/* line 25, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_1 .bio .bio-description {
   width: 100%;
+  height: 100%;
+  padding: 1em;
+  padding-bottom: 3em;
+  overflow: hidden;
   text-align: center;
   font-style: italic;
 }
-/* line 26, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 35, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .behind {
   margin: 0;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   z-index: 0;
 }
-/* line 32, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 41, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .picture {
   position: absolute;
   box-sizing: border-box;
@@ -10014,20 +10019,20 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: hidden;
   display: flex;
 }
-/* line 42, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 51, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .picture img {
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
 }
-/* line 47, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 56, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .ahead {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   margin: 8px 0 0 8px;
   z-index: 1;
 }
-/* line 54, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 63, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10040,22 +10045,18 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 67, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 76, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar .fav {
   margin-left: 5%;
   font-size: 2em;
 }
-/* line 71, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 80, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_1 .action-bar .lock {
   margin-right: 5%;
   font-size: 2em;
 }
-/* line 76, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
-.candidate_1 .action-bar .material-icons.active {
-  color: #F2C94C;
-}
 
-/* line 83, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 88, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .middle-container {
   width: 267px;
   clear: both;
@@ -10064,8 +10065,9 @@ a.text-dark:hover, a.text-dark:focus {
   font-weight: bold;
 }
 
-/* line 92, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 97, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 {
+  cursor: pointer;
   width: 100%;
   margin: auto;
   border: 1px dotted #333;
@@ -10075,7 +10077,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: black;
   color: white;
 }
-/* line 101, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 113, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .bio {
   box-sizing: border-box;
   position: absolute;
@@ -10084,20 +10086,24 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: black;
   display: flex;
 }
-/* line 110, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
-.candidate_2 .bio .bio-description p {
+/* line 121, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+.candidate_2 .bio .bio-description {
   width: 100%;
+  height: 100%;
+  padding: 1em;
+  padding-bottom: 3em;
+  overflow: hidden;
   text-align: center;
   font-style: italic;
 }
-/* line 117, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 131, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .behind {
   margin: 0;
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   z-index: 0;
 }
-/* line 123, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 137, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .picture {
   position: absolute;
   box-sizing: border-box;
@@ -10107,20 +10113,20 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: hidden;
   display: flex;
 }
-/* line 133, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 147, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .picture img {
   -o-object-fit: cover;
      object-fit: cover;
   height: auto;
 }
-/* line 138, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 152, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .ahead {
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   margin: 8px 0 0 8px;
   z-index: 1;
 }
-/* line 145, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 159, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10133,28 +10139,34 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 158, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 172, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar .fav {
   margin-left: 5%;
   font-size: 2em;
 }
-/* line 162, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 176, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .candidate_2 .action-bar .lock {
   margin-right: 5%;
   font-size: 2em;
 }
-/* line 167, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
-.candidate_2 .action-bar .material-icons.active {
-  color: #F2C94C;
+
+/* line 183, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+.material-icons {
+  opacity: 0.3;
 }
 
-/* line 175, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 186, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+.material-icons.active {
+  opacity: 1;
+}
+
+/* line 192, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .circle-image {
   border-radius: 50%;
   width: 40px;
 }
 
-/* line 180, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 197, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .btn-outline-danger {
   justify-content: center;
   margin-left: 20px;
@@ -10164,7 +10176,7 @@ a.text-dark:hover, a.text-dark:focus {
   border-color: #38FC8C;
 }
 
-/* line 189, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
+/* line 206, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_board.scss */
 .btn-light {
   color: #F2C94C;
 }
@@ -10585,13 +10597,18 @@ input[type=submit] {
   text-align: center;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
-  z-index: 2;
   display: flex;
 }
 
-/* line 28, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 25, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+.behind {
+  margin: 0;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  z-index: 0;
+}
+
+/* line 32, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 p.bio-description-self {
   width: 100%;
   height: 250px;
@@ -10604,17 +10621,13 @@ p.bio-description-self {
   padding-top: 20px;
 }
 
-/* line 40, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 44, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .picture-self {
   position: absolute;
   box-sizing: border-box;
   border: 2px solid white;
   background-color: black;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
   text-align: center;
-  margin: 8px 0 0 8px;
-  z-index: 1;
   overflow: hidden;
   display: flex;
 }
@@ -10627,6 +10640,14 @@ p.bio-description-self {
 }
 
 /* line 59, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+.ahead {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  margin: 8px 0 0 8px;
+  z-index: 1;
+}
+
+/* line 66, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .action-bar {
   align-self: flex-end;
   display: flex;
@@ -10639,12 +10660,12 @@ p.bio-description-self {
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 74%, rgba(0, 0, 0, 0.8) 100%);
 }
-/* line 72, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 79, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .action-bar .user-name-display {
   margin-left: 10px;
 }
 
-/* line 77, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 84, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .material-icons-edit {
   color: #38FC8C;
   padding-right: 10px;
@@ -10652,7 +10673,7 @@ p.bio-description-self {
   line-height: none;
 }
 
-/* line 85, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 92, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .karma-score {
   color: #F2C94C;
   text-align: center;
@@ -10662,12 +10683,12 @@ p.bio-description-self {
   padding: 10px;
 }
 
-/* line 94, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 101, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .action_link_user-show {
   margin: auto;
 }
 
-/* line 98, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 105, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button {
   border-width: 1.5px;
   border-style: solid;
@@ -10678,14 +10699,14 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px 30px;
 }
-/* line 107, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 114, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button a {
   text-decoration: none;
   color: white;
   font-weight: lighter;
 }
 
-/* line 114, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 121, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button {
   border-color: #38FC8C;
   border-width: 3px;
@@ -10699,7 +10720,7 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px;
 }
-/* line 126, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 133, /Volumes/HDD/Users/BenjaminCalmejane/Dev/THP/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button a {
   text-decoration: none;
   color: #38FC8C;
