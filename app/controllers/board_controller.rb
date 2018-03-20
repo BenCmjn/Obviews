@@ -35,11 +35,21 @@ class BoardController < ApplicationController
     if current_user.randomize == true
       self.random 
     end
+    
+    ids = User.pluck(:id)
+    ids.delete_if {|id| id == current_user.id }
+    fate = ids.shuffle[0..1]
+
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
+
+    board.user_ids = [fate[0], fate[1]]
+    board.save
+
     @candidate_1 = board.users.first
     @candidate_2 = board.users.last
   end
+
 
 ##################################################################
 

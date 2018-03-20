@@ -37,7 +37,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
     Board.create(user_id: current_user.id)
-    byebug
   end
 
   #POST /resource
