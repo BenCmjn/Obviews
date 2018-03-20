@@ -4,16 +4,10 @@
     margin: auto;
     border: 1px dotted #333;
     position: relative;
-    /* margin-bottom: 5px; */
     height: 300px;
     background-color: black;
     color: white;
-    // #click-frame-pix{
-    //     background-color: rgba(255,0,0,.9);
-    // }
-    // #click-frame-bio{
-    //     background-color: rgba(0,255,0,.9);
-    // }
+
     .bio {
         box-sizing: border-box;
         position: absolute;
@@ -21,17 +15,17 @@
         border: 2px solid white;
         background-color: black;
 
-        display: flex; // .bio_container is [display flex]
+        display: flex; 
         .bio-description {
-                width: 100%;
-                height: 100%;
-                padding: 1em;
-                padding-bottom: 3em;
-                overflow: hidden;
-                text-align: center;
-                font-style: italic;
-            }
+            width: 100%;
+            height: 100%;
+            padding: 1em;
+            padding-bottom: 3em;
+            overflow: hidden;
+            text-align: center;
+            font-style: italic;
         }
+    }
     .behind {
         margin: 0; // a verifier 
         width: calc(100% - 10px);
@@ -86,11 +80,39 @@
 
 //--------------------------------------------------------------------------------------
 .middle-container {
-    width: 267px;
-    clear: both;
-    margin: 20px auto 20px auto;
-    font-family: 'Kalam', cursive;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Kalam';
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .child {
+        align-self: baseline;
+        margin: auto;
+        /* Magic! */
+    }
+    .action-button {
+        align-self: center;
+        text-align: center;
+        border-radius: 0;
+        padding: 0.2em .8em;
+        margin: 0.5em 0.2em;
+        &:hover {
+            background-color: #38FC8C;
+            font-weight: bold;
+            color: black !important;
+        }
+    }
+
+    .action_link {
+        font-family: "Kalam";
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #F2C94C;
+        text-decoration: none;
+    }
 }
 
 //--------------------------------------------------------------------------------------
@@ -100,16 +122,9 @@
     margin: auto;
     border: 1px dotted #333;
     position: relative;
-    /* margin-bottom: 5px; */
     height: 300px;
     background-color: black;
     color: white;
-    // #click-frame-pix{
-    //     background-color: rgba(255,0,0,.9);
-    // }
-    // #click-frame-bio{
-    //     background-color: rgba(0,255,0,.9);
-    // }
     .bio {
         box-sizing: border-box;
         position: absolute;
@@ -119,15 +134,15 @@
 
         display: flex; // .bio_container is [display flex]
         .bio-description {
-                width: 100%;
-                height: 100%;
-                padding: 1em;
-                padding-bottom: 3em;
-                overflow: hidden;
-                text-align: center;
-                font-style: italic;
-            }
+            width: 100%;
+            height: 100%;
+            padding: 1em;
+            padding-bottom: 3em;
+            overflow: hidden;
+            text-align: center;
+            font-style: italic;
         }
+    }
     .behind {
         margin: 0; // a verifier 
         width: calc(100% - 10px);
@@ -180,29 +195,20 @@
         }
     }
 }
-.material-icons{
-            opacity: .3
-        }
-        .material-icons.active {
-            opacity: 1
-        }
+
+.material-icons {
+    opacity: .3
+}
+
+.material-icons.active {
+    opacity: 1
+}
 
 //------------------------------------------------------------------------
 // Le reste.. on le garde au cas où, jusqu'à nouvel ordre.
 .circle-image {
     border-radius: 50%;
-    width: 40px;
-}
-
-.btn-outline-danger {
-    justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0.375rem 1.75rem;
-    color: #38FC8C;
-    border-color: #38FC8C;
-}
-
-.btn-light {
-    color: #F2C94C;
+    width: 48px;
+    height: 48px;
+    border: 2px solid white;
 }

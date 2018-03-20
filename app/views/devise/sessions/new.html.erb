@@ -2,34 +2,50 @@
     <h1>Obviews!</h1>
 
     <!-- FORM BEGINNING -->
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email",placeholder:"Email",class: "field1" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "Ton email (Ex:",placeholder:"Email",class: "field1" %>
         </div>
 
-        <div class="field">
-          <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe",class: "field1" %>
+        <div class="deco_form_1" style="
+          width: calc(100% - 20px);
+          border: solid 1px white;
+          height: 2.5em;
+          z-index: -1;
+          margin: -50px 0px 30px 0px;">
+          <% if devise_mapping.rememberable? -%>
+            <div class="field" style="
+              margin-bottom: 40px;
+              margin-top: 40px;">
+              <%= f.check_box :remember_me , class: "white-text", style: "margin-top: 10px;" %>
+              <%= f.label :remember_me, class: "white-text" %>
+            </div>
+          <% end -%>  
         </div>
 
-        <% if devise_mapping.rememberable? -%>
           <div class="field">
-            <%= f.check_box :remember_me , class: "white-text"%>
-            <%= f.label :remember_me, class: "white-text" %>
+            <%= f.password_field :password, autocomplete: "off",placeholder:"Ton mot de passe",class: "field1" %>
           </div>
-        <% end -%>
+          <div class="deco_form_2" style="
+            width: calc(100% - 20px);
+            border: solid 1px white;
+            height: 2.5em;
+            z-index: -2;
+            margin: -30px 0px 30px 20px;">
+          </div>
 
         <div class="actions">
           <%= f.submit "SE CONNECTER" %>
         </div>
+        
     <% end %>
 
     <div class= "action_link">
      <%= link_to 'Mot de passe oublié?', new_user_password_path, class: "password" %>
     </div>
 
-    <div class= "action-button">
-    <%= link_to "S'inscrire!", new_user_registration_path, class: "login" %>
+    <div class= "action_link" style="margin-top: 2em;">
+    <%= link_to "Pas encore membre ?", new_user_registration_path, class: "login" %>
     </div>
 
 </div>

@@ -20,7 +20,7 @@
     </div>
 
     <div class="selected-names">
-      <%= @candidate_1.firstname %> & <%= @candidate_2.firstname %>...
+      <%= @candidate_1.firstname %> &amp; <%= @candidate_2.firstname %>…
     </div>
 
 <!--
@@ -37,9 +37,8 @@
     </div> 
     <%= mail_to "#{@candidate_1.email}", "ENVOI", subject: "Vous avez matché avec #{@candidate_2.firstname} !", body:"#{@intro}" %>
 -->    
-    <%= link_to match_path do %>
-    <button type="button" class="btn btn-outline-danger">Valider</button>
-    <% end %>
+    <%= link_to 'Valider', match_path, class: "action-button" %>
+    
 
     <div class="action_link">
       <%= link_to "Annuler", board_show_path %>
