@@ -1,7 +1,7 @@
 class BoardController < ApplicationController
   def random
     tempboard = Board.where(user_id: current_user.id)
-    board = Board.find(tempboard.ids)
+    board = Board.find(tempboard.ids).last
     candidate_1 = board.users.first
     candidate_2 = board.users.last
     lock = board.lock
@@ -35,7 +35,8 @@ class BoardController < ApplicationController
     if current_user.randomize == true
       self.random 
     end
-    board = Board.where(user_id: current_user.id)
+    tempboard = Board.where(user_id: current_user.id)
+    board = Board.find(tempboard.ids).last
     @candidate_1 = board.users.first
     @candidate_2 = board.users.last
   end
@@ -45,11 +46,13 @@ class BoardController < ApplicationController
   def next
     current_user.randomize = true
     current_user.save
+    self.random
+    redirect_to root_path
   end
 
   def confirmation
     tempboard = Board.where(user_id: current_user.id)
-    board = Board.find(tempboard.ids)
+    board = Board.find(tempboard.ids).last
     @candidate_1 = board.users.first
     @candidate_2 = board.users.last
   end
