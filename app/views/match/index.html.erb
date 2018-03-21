@@ -1,78 +1,105 @@
 <div class="container">
+
   <div class="container-match-index">
+
   <%= link_to users_show_path do %><i class="material-icons">chevron_left</i><% end %>
+
     <h1> Mes views </h1>
+
   </div>
+
     <!-- Tab links -->
+
     <div class="tab-nav">
+
       <button class="tablinks btn-matchmaker tab-nav-active">
-        <i class="material-icons">file_download</i>
-      </button>
-      <button class="tablinks btn-selected">
+
         <i class="material-icons">file_upload</i>
+
       </button>
+
+      <button class="tablinks btn-selected">
+
+        <i class="material-icons">file_download</i>
+
+      </button>
+
     </div>
+
+
 
     <!-- Tab content -->
+
     <div id="as-matchmaker" class="tabcontent tab-active">
+
+      <% @matches.each do |m| %>
+        <%= link_to match_show_path(:id => m.id) do %>
       <div class="match-div">
 
-        <div class="match-div-1">
-          <div class="selected-name">Thomas</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img></div>
-        </div>
-        <div class="match-div-2">
-          <div class="match-div-img"><img class="image-self" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-        <div class="match-div-3">
-          <div class="selected-name">Léa</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-      </div>
 
-      <div class="match-div">
+
         <div class="match-div-1">
-          <div class="selected-name">Thomas</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img></div>
+
+          <div class="selected-name"><%= User.find(m.user_ids.first).firstname %></div>
+
+          <div class="match-div-img"><%= image_tag User.find(m.user_ids.first).avatar.url(:thumb) %></div>
+
         </div>
+
         <div class="match-div-2">
-          <div class="match-div-img"><img class="image-self" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
+
+          <div class="match-div-img"><%= image_tag current_user.avatar.url(:thumb), class:"image-self" %></div>
+
         </div>
+
         <div class="match-div-3">
-          <div class="selected-name">Léa</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
+
+          <div class="selected-name"><%= User.find(m.user_ids.last).firstname %></div>
+
+          <div class="match-div-img"><%= image_tag User.find(m.user_ids.last).avatar.url(:thumb) %></div>
+        
         </div>
+
       </div>
+        <% end %>
+      <% end %>
+
+
+
     </div>
 
+
+
     <div id="as-selected" class="tabcontent">
+
+      <% @as_selected.each do |m| %>
+        <%= link_to match_show_path(:id => m.id) do %>
       <div class="match-div">
 
-        <div class="match-div-1">
-          <div class="selected-name">Thomas</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img></div>
-        </div>
-        <div class="match-div-2">
-          <div class="match-div-img"><img class="image-self" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-        <div class="match-div-3">
-          <div class="selected-name">Léa</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-      </div>
 
-      <div class="match-div">
-        <div class="match-div-1">
-          <div class="selected-name">Thomas</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img></div>
-        </div>
-        <div class="match-div-2">
-          <div class="match-div-img"><img class="image-self" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-        <div class="match-div-3">
-          <div class="selected-name">Léa</div>
-          <div class="match-div-img"><img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img></div>
-        </div>
-      </div>
 
-</div>
+        <div class="match-div-1">
+
+          <div class="selected-name"><%= User.find(m.user_ids.first).firstname %></div>
+
+          <div class="match-div-img"><%= image_tag User.find(m.user_ids.first).avatar.url(:thumb) %></div>
+        </div>
+
+        <div class="match-div-2">
+
+          <div class="match-div-img"><%= image_tag User.find(m.user_id).avatar.url(:thumb), class:"image-self" %></div>
+        
+        </div>
+
+        <div class="match-div-3">
+
+          <div class="selected-name"><%= User.find(m.user_ids.last).firstname %></div>
+
+          <div class="match-div-img"><%= image_tag User.find(m.user_ids.last).avatar.url(:thumb) %></div>
+
+        </div>
+
+      </div>
+        <% end %>
+      <% end %>
+      </div>
