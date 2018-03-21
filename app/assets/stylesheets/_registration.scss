@@ -14,7 +14,8 @@
   font-family: "Kalam";
   font-weight: bold;
   color: white;
-  font-size: 24px;
+  font-size: 30px;
+  margin-bottom: 50px;
 
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
@@ -26,6 +27,12 @@
 
 #form_part1.form-active {
   display: block;
+  width: 94%;
+  .action-button {
+    width: 94%;
+    margin: auto;
+    margin-top: 75px;
+  }
 }
 
 #form_part1.form-unactive {
