@@ -1,4 +1,6 @@
 class BoardController < ApplicationController
+  before_action :authenticate_user!
+
   def random
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
