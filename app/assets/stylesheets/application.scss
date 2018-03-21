@@ -6,6 +6,8 @@
 @import "match_index";
 @import "user_show";
 @import 'slick';
+@import 'slick-theme';
+
 
 body {
     background-color: #141424;
@@ -95,4 +97,26 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.3em;
+}
+
+/* CAROUSEL */
+
+.scroller {
+  div {
+    text-align: center;
+    font-size: 30px;
+    background-color: pink;
+  }
+}
+
+.slick-prev::before, .slick-next::before {
+  color: #000;
+}
+
+.slick-next {
+  right: -5px;
+}
+
+.slick-prev {
+  left: -5px;
 }
