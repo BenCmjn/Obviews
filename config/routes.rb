@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'users/show'
+  get 'users/carousel', to: 'users#carousel'
 
   root 'board#show'
 
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'match/index', to: 'match#index'
   get 'match/show', to: 'match#show'
-  
+
   get 'users/show', to: 'users#show'
 
   post 'board/confirmation'
