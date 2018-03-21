@@ -1,10 +1,18 @@
 $(document).ready(function() {
-        // $.ajax({
-        //     url: "/board/show",
-        //     type: "get",
-        //     data: { lock_client: state }
-        // });
-        // console.log("Valeur du lock : " + state);
+    // $.ajax({
+    //     url: "/board/show",
+    //     type: "get",
+    //     data: { lock_client: state }
+    // });
+    // console.log("Valeur du lock : " + state);
+    
+    // var state = <%= @lock_state %>;
+    var state = $('#board-lock').val();
+
+    if (!state) {
+        state = 0;
+    };
+    console.log(state);
 
     $(".candidate_1 #click-frame-pix").click(function(e) {
         if (e.target.id == "click-frame-pix") {
@@ -71,7 +79,6 @@ $(document).ready(function() {
         }
     });
     ///////////////// SWITCH LOCKS ///////////////////////////////
-    var state = 0;
 
     $(".candidate_1 .lock").click(function() {
         switch (state) {
