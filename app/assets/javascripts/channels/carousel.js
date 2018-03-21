@@ -1,3 +1,6 @@
 $(document).ready(function() {
-  $('.scroller').slick();
+  $('.scroller').slick({
+    dots: true,
+  });
+
 })
