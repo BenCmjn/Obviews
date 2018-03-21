@@ -19,8 +19,12 @@
       <i class="fav material-icons">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+      <%= link_to board_show_path do %>
+        <i class="lock material-icons">lock_open</i>
+      <% end %>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <!-- <i class="lock material-icons active">lock</i> -->
+      <!-- <i class="lock material-icons">lock</i> -->
     </div>
   </div>
 </div>
@@ -53,6 +57,9 @@
       <i class="fav material-icons">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
+      <!-- <i class="lock material-icons">lock_open</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <!-- <i class="lock material-icons active">lock</i> -->
       <!-- Activer si le user clique sur cette div -->
       <i class="lock material-icons">lock</i>
     </div>
@@ -63,8 +70,13 @@
       <i class="fav material-icons">star</i>
       <!--^ Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
+      <%= link_to board_show_path do %>
+        <i class="lock material-icons">lock_open</i>
+      <% end %>
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons">lock</i>
+      <!-- <i class="lock material-icons active">lock</i> -->
+      <!-- Activer si le user clique sur cette div -->
+      <!-- <i class="lock material-icons">lock</i> -->
     </div>
   </div>
 </div>
