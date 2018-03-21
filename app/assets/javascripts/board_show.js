@@ -21,43 +21,6 @@ $(document).ready(function() {
             $(".candidate_1 .picture").addClass('ahead');
         }
     });
-///////////////// SWITCH DES LOCKS ////////////////////////////////////////////////////////
-    $(".candidate_1 .lock").click(function() {
-        if ($(".candidate_1 .lock").hasClass('inactive')
-        && $(".candidate_2 .lock").hasClass('inactive')) {
-
-            $(".candidate_1 .lock").removeClass('inactive');
-            $(".candidate_1 .lock").addClass('active');     
-            console.log("Lock_1 is now ACTIVE !");
-        }
-        else if ($(".candidate_1 .lock").hasClass('active')
-        && $(".candidate_2 .lock").hasClass('inactive')) {
-
-            $(".candidate_1 .lock").removeClass('active');
-            $(".candidate_1 .lock").addClass('inactive'); 
-            console.log("Lock_1 is now INactive !");
-            // $(".candidate_2 .lock").removeClass('inactive'); 
-            // $(".candidate_2 .lock").addClass('active');
-            // console.log("Lock_2 is now INactive !"); 
-            if ($(".candidate_2 .lock").hasClass('active')) {
-            $(".candidate_2 .lock").removeClass('active');
-            $(".candidate_2 .lock").addClass('inactive');
-            console.log("Lock_2 is now INactive !");
-            } 
-        }
-        // else if ($(".candidate_1 .lock").hasClass('inactive')
-        // && $(".candidate_2 .lock").hasClass('active')) {
-
-        //     $(".candidate_2 .lock").removeClass('active');
-        //     $(".candidate_2 .lock").addClass('inactive');
-        //     console.log("Lock_2 is now INactive !");
-        //     // $(".candidate_1 .lock").removeClass('inactive');
-        //     // $(".candidate_1 .lock").addClass('active');  
-        // }
-    });
-
-    ////////////////////////////////////////////////////////////////////////////////
-    // RENDRE CANDIDATE_1 FAVED
     $(".candidate_1 .fav").click(function() {
         if ($(".candidate_1 .fav").hasClass('active')) {
             $(".candidate_1 .fav").removeClass('active')
@@ -67,7 +30,7 @@ $(document).ready(function() {
             console.log("Candidate 1 is now FAVED !");
         }
     });
-    //------------------------------------------------------
+//------------------------------------------------------
     $(".candidate_2 #click-frame-pix").click(function(f) {
         if (f.target.id == "click-frame-pix") {
             console.log("PIX 2 clicked !");
@@ -91,16 +54,6 @@ $(document).ready(function() {
         }
     });
 
-    // $(".candidate_2 .lock").click(function() {
-    //     if ($(".candidate_2 .lock").hasClass('active')) {
-    //         $(".candidate_2 .lock").removeClass('active')
-    //         console.log("Candidate 2 is now UNLOCKED !");
-    //     } else {
-    //         $(".candidate_2 .lock").addClass('active')
-    //         console.log("Candidate 2 is now LOCKED !");
-    //     }
-    // });
-
     $(".candidate_2 .fav").click(function() {
         if ($(".candidate_2 .fav").hasClass('active')) {
             $(".candidate_2 .fav").removeClass('active')
@@ -108,6 +61,72 @@ $(document).ready(function() {
         } else {
             $(".candidate_2 .fav").addClass('active')
             console.log("Candidate 2 is now FAVED !");
+        }
+    });
+///////////////// SWITCH LOCKS ///////////////////////////////
+    var state = 0;
+
+    $(".candidate_1 .lock").click(function() {
+        switch (state) {
+            case 0:
+                $(".candidate_1 .lock").removeClass('inactive');
+                $(".candidate_1 .lock").addClass('active');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                state = 1;
+                console.log("candidate_1 is LOCK");
+                break;
+            case 1:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                console.log("candidate_1 is UNlock");
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                state = 0;
+                console.log("Nobody is lock : Default");
+                break;
+            case 2:
+                $(".candidate_1 .lock").removeClass('inactive');
+                $(".candidate_1 .lock").addClass('active');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                console.log("candidate_2 is UNlock");
+                state = 1;
+                console.log("candidate_1 is LOCK");
+                break;
+            default:0;
+        }
+    });
+//------------------------------------------------------
+    $(".candidate_2 .lock").click(function() {
+        switch (state) {
+            case 0:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                $(".candidate_2 .lock").removeClass('inactive');
+                $(".candidate_2 .lock").addClass('active');
+                state = 2;
+                console.log("candidate_2 is LOCK");
+                break;
+            case 1:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                console.log("candidate_1 is UNlock");
+                $(".candidate_2 .lock").removeClass('inactive');
+                $(".candidate_2 .lock").addClass('active');
+                state = 2;
+                console.log("candidate_2 is LOCK");
+                break;
+            case 2:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                console.log("candidate_2 is UNlock");
+                state = 0;
+                console.log("Nobody is lock : Default");
+                break;
+            default:0;
         }
     });
 });
