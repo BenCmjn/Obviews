@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # authentification
 #gem 'pundit'
-
+gem 'dotenv-rails'
 gem 'devise'
 gem 'rails'
 gem 'puma'
@@ -15,15 +15,20 @@ gem 'jbuilder'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails'
 gem 'guard'
+gem 'rspec-rails'
+gem 'paperclip'
+gem 'mailjet'
+gem 'aws-sdk', '~> 2.3'
+
 
 group :development, :test do
+
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
-  gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'database_cleaner'
-  gem "factory_bot_rails"
+  gem "factory_bot_rails", :require => false
   gem 'simplecov'
   gem 'guard-rspec', require: false
 end

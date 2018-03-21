@@ -1,0 +1,44 @@
+<div class="container container-my-profile">
+    <div class= "my-profile">
+      <div class="my-bio behind">
+        <p class="bio-description-self">
+          <%= current_user.bio %>
+        </p>
+        <div class="action-bar">
+          <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
+            <%= link_to edit_user_registration_path do %>
+              <i class="material-icons material-icons-edit" style="font-size: 30px">mode_edit</i>
+            <% end %>
+        </div>
+      </div>
+      <div class="picture-self ahead">
+        <%= image_tag current_user.avatar.url(:original), class: "img-fluid"  %>
+        <div class="action-bar">
+          <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
+            <%= link_to edit_user_registration_path do %>
+              <i class="material-icons material-icons-edit" style="font-size: 30px">mode_edit</i>
+              <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="karma-score">
+      Karma: 53
+    </div>
+
+    
+    <a class="action-button" href="/match/index" >Voir mes views</a>
+    
+
+
+
+    <% if user_signed_in? %>
+      <li><a><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
+    <% end %>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fobviews-dev.herokuapp.com%2F&layout=button&size=small&mobile_iframe=true&width=73&height=20&appId" width="73" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+    <div class="action_link action_link_user-show">
+      <a href='/board/show'>Retour</a>
+    </div>
+</div>

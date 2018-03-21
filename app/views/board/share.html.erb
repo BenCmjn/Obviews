@@ -8,11 +8,9 @@
         <p>Tu recevras du karma pour </br> cette bonne action ;)</p>
     </div>
 
-    <div class="CTA_button">
-        <a href='#'>PARTAGE !</a>
-    </div>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fobviews-dev.herokuapp.com%2F&layout=button&size=small&mobile_iframe=true&width=73&height=20&appId" width="73" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-    <div class="action_link">
-        <a href='#' >Pas maintenant</a>
-    </div>
+    <%= link_to next_path, type:"button", class:"action_link", method: :get do %>
+      <span class="action_link">Pas maintenant</span>
+    <% end %>
 </div>
