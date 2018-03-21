@@ -21,18 +21,8 @@ $(document).ready(function() {
             $(".candidate_1 .picture").addClass('ahead');
         }
     });
-
-    $(".candidate_1 .lock").click(function() {
-        if($(".candidate_1 .lock").hasClass('active')){
-            $(".candidate_1 .lock").removeClass('active')
-            console.log("Candidate 1 is now UNLOCKED !");
-        } else {
-            $(".candidate_1 .lock").addClass('active')
-            console.log("Candidate 1 is now LOCKED !");
-        }
-    });
     $(".candidate_1 .fav").click(function() {
-        if($(".candidate_1 .fav").hasClass('active')){
+        if ($(".candidate_1 .fav").hasClass('active')) {
             $(".candidate_1 .fav").removeClass('active')
             console.log("Candidate 1 is now FAVED !");
         } else {
@@ -64,17 +54,8 @@ $(document).ready(function() {
         }
     });
 
-    $(".candidate_2 .lock").click(function() {
-        if($(".candidate_2 .lock").hasClass('active')){
-            $(".candidate_2 .lock").removeClass('active')
-            console.log("Candidate 2 is now UNLOCKED !");
-        } else {
-            $(".candidate_2 .lock").addClass('active')
-            console.log("Candidate 2 is now LOCKED !");
-        }
-    });
     $(".candidate_2 .fav").click(function() {
-        if($(".candidate_2 .fav").hasClass('active')){
+        if ($(".candidate_2 .fav").hasClass('active')) {
             $(".candidate_2 .fav").removeClass('active')
             console.log("Candidate 2 is now FAVED !");
         } else {
@@ -82,6 +63,70 @@ $(document).ready(function() {
             console.log("Candidate 2 is now FAVED !");
         }
     });
+///////////////// SWITCH LOCKS ///////////////////////////////
+    var state = 0;
 
-
+    $(".candidate_1 .lock").click(function() {
+        switch (state) {
+            case 0:
+                $(".candidate_1 .lock").removeClass('inactive');
+                $(".candidate_1 .lock").addClass('active');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                state = 1;
+                console.log("candidate_1 is LOCK");
+                break;
+            case 1:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                console.log("candidate_1 is UNlock");
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                state = 0;
+                console.log("Nobody is lock : Default");
+                break;
+            case 2:
+                $(".candidate_1 .lock").removeClass('inactive');
+                $(".candidate_1 .lock").addClass('active');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                console.log("candidate_2 is UNlock");
+                state = 1;
+                console.log("candidate_1 is LOCK");
+                break;
+            default:0;
+        }
+    });
+//------------------------------------------------------
+    $(".candidate_2 .lock").click(function() {
+        switch (state) {
+            case 0:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                $(".candidate_2 .lock").removeClass('inactive');
+                $(".candidate_2 .lock").addClass('active');
+                state = 2;
+                console.log("candidate_2 is LOCK");
+                break;
+            case 1:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                console.log("candidate_1 is UNlock");
+                $(".candidate_2 .lock").removeClass('inactive');
+                $(".candidate_2 .lock").addClass('active');
+                state = 2;
+                console.log("candidate_2 is LOCK");
+                break;
+            case 2:
+                $(".candidate_1 .lock").removeClass('active');
+                $(".candidate_1 .lock").addClass('inactive');
+                $(".candidate_2 .lock").removeClass('active');
+                $(".candidate_2 .lock").addClass('inactive');
+                console.log("candidate_2 is UNlock");
+                state = 0;
+                console.log("Nobody is lock : Default");
+                break;
+            default:0;
+        }
+    });
 });
