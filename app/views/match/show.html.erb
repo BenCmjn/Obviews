@@ -1,77 +1,52 @@
 <!-- TOP CONTAINER -->
 <div class= "candidate_1">
   <div class="bio behind">
-    <p class="bio_description">
-      <%= @candidate_1.bio %>
+    <p class="bio_description" id="click-frame-bio">
+      <span> @candidate_1.bio </span>
     </p>
     <div class="action-bar">
       <i class="fav material-icons">star_border</i>
       <!-- Activer si le user clique sur cette div -->
       <!-- <i class="fav material-icons active">star</i> -->
-      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <i class="lock material-icons">lock_open</i>
+      <span class="user-name-display">@candidate_1.firstname @candidate_1.lastname</span>
       <!-- Activer si le user clique sur cette div -->
       <!-- <i class="lock material-icons active">lock</i> -->
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid"  %>
+    <span> image_tag current_user.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix" </span>
     <div class="action-bar">
       <!-- <i class="fav material-icons">star_border</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
+      <span class="user-name-display">@candidate_1.firstname @candidate_1.lastname</span>
       <!-- <i class="lock material-icons">lock_open</i> -->
       <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
     </div>
   </div>
 </div>
 <!-- MIDDLE -->
 <div class= "middle-container">
 
-    <%= link_to users_show_path(current_user) do %>
-      <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
+    <%= link_to '/match/index', type:"button", class:"action_link", method: :get do %>
+    <button type="button" class="action_link">Retour</button>
     <% end %>
-
-    <%= link_to board_confirmation_path do %>
-    <button type="button" class="btn btn-outline-danger">MATCH</button>
-    <% end %>
-
-
-    <%= link_to next_path, type:"button", class:"action_link", method: :get do %>
-    <button type="button" class="action_link">Next</button>
-    <% end %>
-
 
 </div>
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
   <div class="bio behind">
-    <p class="bio_description">
-      <%= @candidate_2.bio %>
+    <p class="bio_description" id="click-frame-bio">
+      <span> @candidate_2.bio </span>
     </p>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-
-      <!-- <i class="lock material-icons">lock_open</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <span class="user-name-display"> @candidate_2.firstname @candidate_2.lastname</span>
     </div>
   </div>
   <div class="picture ahead">
-    <%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid"  %>
+    <span>image_tag @candidate_1.avatar.url(:original), class: "img-fluid"</span>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="fav material-icons active">star</i>
-      <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
-      <!-- Activer si le user clique sur cette div -->
-      <i class="lock material-icons active">lock</i>
+      <span class="user-name-display"> @candidate_2.firstname @candidate_2.lastname</span>
+
     </div>
   </div>
 </div>

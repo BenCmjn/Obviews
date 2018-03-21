@@ -11,18 +11,18 @@ Devise.setup do |config|
   config.secret_key = '19b8bfda02927d16e9ca4358447dce2c92635ee2d2c86215ca6407572516fd4536339249e94e1c90b884d70d703b9e9f129fb55a3ce868d0a6078c07e6156795'
 
 
-  Warden::Manager.after_set_user do |current_user,auth,opts|
-    if current_user.board_ids == []
-      current_user.boards << Board.create(user_id: current_user.id)
-      current_user.save
-    end
-  end
-  Warden::Manager.after_authentication do |current_user,auth,opts|
-    if current_user.board_ids == []
-      current_user.boards << Board.create(user_id: current_user.id)
-      current_user.save
-    end
-  end
+#  Warden::Manager.after_set_user do |current_user,auth,opts|
+ #   if current_user.boards.first == nil
+  #    current_user.boards << Board.create(user_id: current_user.id)
+  #    current_user.save
+  #  end
+ # end
+ # Warden::Manager.after_authentication do |current_user,auth,opts|
+ #   if current_user.boards.first == nil
+ #     current_user.boards << Board.create(user_id: current_user.id)
+ #     current_user.save
+ #   end
+ # end
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class

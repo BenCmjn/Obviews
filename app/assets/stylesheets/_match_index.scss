@@ -20,14 +20,14 @@
 
 /* Style the tab */
 
-.tab {
+.tab-nav {
     overflow: hidden;
     background-color: black;
 }
 
 /* Style the buttons that are used to open the tab content */
 
-.tab button {
+.tab-nav button {
     width: 50%;
     background-color: inherit;
     float: left;
@@ -41,20 +41,19 @@
     color: rgba(255, 255, 255, 0.5);
     i {
         color: white;
+        opacity: 1;
     }
 }
 
-
 /* Change background color of buttons on hover */
 
-.tab button i:hover {
+.tab-nav button i:hover {
     color: #38FC8C;
 }
 
-
 /* Create an active/current tablink class */
 
-.tab button.active {
+.tab-nav button.tab-nav-active {
     background-color: black;
     border: 1px solid #ccc;
     border-bottom: none;
@@ -63,6 +62,7 @@
     color: white;
     i {
         color: #38FC8C;
+        opacity: 1;
     }
 }
 
@@ -75,9 +75,15 @@
     border: 1px solid #ccc;
     border-top: none;
     animation: fadeEffect 1s;
-    /* Fading effect takes 1 second */
 }
 
+.tab-active {
+    display: block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    animation: fadeEffect 1s;
+}
 
 /* Go from zero to full opacity */
 
@@ -90,9 +96,7 @@
     }
 }
 
-
 /* TEXTS */
-
 
 .match-div {
     border: 1px solid white;
