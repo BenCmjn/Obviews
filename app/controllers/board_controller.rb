@@ -30,43 +30,33 @@ class BoardController < ApplicationController
     current_user.randomize = false
     current_user.save
   end
-  
+ 
   def show
     if current_user.randomize == true
-      self.random 
+      self.random
     end
-    
-    ids = User.pluck(:id)
-    ids.delete_if {|id| id == current_user.id }
-    fate = ids.shuffle[0..1]
-
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
-
-    board.user_ids = [fate[0], fate[1]]
-    board.save
-
     @candidate_1 = board.users.first
     @candidate_2 = board.users.last
   end
-
-
+ 
 ##################################################################
-
+ 
   def next
     current_user.randomize = true
     current_user.save
     self.random
     redirect_to root_path
   end
-
+ 
   def confirmation
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
     @candidate_1 = board.users.first
     @candidate_2 = board.users.last
   end
-  
+ 
   def match
     current_user.randomize = true
     current_user.save
@@ -76,10 +66,10 @@ class BoardController < ApplicationController
  
   def share
   end
-
+ 
   def index
   end
-
+ 
   def get_ids
   end
 end
