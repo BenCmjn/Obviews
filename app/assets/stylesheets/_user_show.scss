@@ -23,7 +23,7 @@
 }
 
 .behind {
-    margin: 0; // a verifier 
+    margin: 0; // a verifier
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     z-index: 0;
@@ -88,7 +88,6 @@ p.bio-description-self {
     line-height: none;
 }
 
-
 .karma-score {
     color: #F2C94C;
     text-align: center;
@@ -96,6 +95,14 @@ p.bio-description-self {
     font-size: 20px;
     margin: auto;
     padding: 10px;
+}
+
+.exit-icon {
+  color: #F2C94C;
+}
+
+.exit-icon:hover {
+  color: #38FC8C;
 }
 
 .action_link_user-show {
