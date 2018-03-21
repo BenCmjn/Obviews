@@ -17906,43 +17906,91 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 }).call(this);
 $(document).ready(function() {
-    $(".candidate_1 .picture").click(function(){
-        console.log("Click sur picture 1 !");
+    $(".candidate_1 #click-frame-pix").click(function(e) {
+        if (e.target.id == "click-frame-pix") {
+            console.log("PIX 1 clicked !");
 
-        $(this).removeClass('ahead');
-        $(this).addClass('behind');
+            $(".candidate_1 .picture").removeClass('ahead');
+            $(".candidate_1 .picture").addClass('behind');
 
-        $(".candidate_1 .bio").removeClass('behind');
-        $(".candidate_1 .bio").addClass('ahead');
+            $(".candidate_1 .bio").removeClass('behind');
+            $(".candidate_1 .bio").addClass('ahead');
+        }
     });
-    $(".candidate_1 .bio").click(function(){
-        console.log("Click sur bio 1!");
+    $(".candidate_1 #click-frame-bio").click(function(e) {
+        if (e.target.id == "click-frame-bio") {
+            console.log("BIO 1 clicked !");
 
-        $(this).removeClass('ahead');
-        $(this).addClass('behind');
+            $(".candidate_1 .bio").removeClass('ahead');
+            $(".candidate_1 .bio").addClass('behind');
 
-        $(".candidate_1 .picture").removeClass('behind');
-        $(".candidate_1 .picture").addClass('ahead');
+            $(".candidate_1 .picture").removeClass('behind');
+            $(".candidate_1 .picture").addClass('ahead');
+        }
     });
 
-    $(".candidate_2 .picture").click(function(){
-        console.log("Click sur picture 2 !");
-
-        $(this).removeClass('ahead');
-        $(this).addClass('behind');
-
-        $(".candidate_2 .bio").removeClass('behind');
-        $(".candidate_2 .bio").addClass('ahead');
+    $(".candidate_1 .lock").click(function() {
+        if($(".candidate_1 .lock").hasClass('active')){
+            $(".candidate_1 .lock").removeClass('active')
+            console.log("Candidate 1 is now UNLOCKED !");
+        } else {
+            $(".candidate_1 .lock").addClass('active')
+            console.log("Candidate 1 is now LOCKED !");
+        }
     });
-    $(".candidate_2 .bio").click(function(){
-        console.log("Click sur bio 2 !");
-
-        $(this).removeClass('ahead');
-        $(this).addClass('behind');
-
-        $(".candidate_2 .picture").removeClass('behind');
-        $(".candidate_2 .picture").addClass('ahead');
+    $(".candidate_1 .fav").click(function() {
+        if($(".candidate_1 .fav").hasClass('active')){
+            $(".candidate_1 .fav").removeClass('active')
+            console.log("Candidate 1 is now FAVED !");
+        } else {
+            $(".candidate_1 .fav").addClass('active')
+            console.log("Candidate 1 is now FAVED !");
+        }
     });
+//------------------------------------------------------
+    $(".candidate_2 #click-frame-pix").click(function(f) {
+        if (f.target.id == "click-frame-pix") {
+            console.log("PIX 2 clicked !");
+
+            $(".candidate_2 .picture").removeClass('ahead');
+            $(".candidate_2 .picture").addClass('behind');
+
+            $(".candidate_2 .bio").removeClass('behind');
+            $(".candidate_2 .bio").addClass('ahead');
+        }
+    });
+    $(".candidate_2 #click-frame-bio").click(function(f) {
+        if (f.target.id == "click-frame-bio") {
+            console.log("BIO 2 clicked !");
+
+            $(".candidate_2 .bio").removeClass('ahead');
+            $(".candidate_2 .bio").addClass('behind');
+
+            $(".candidate_2 .picture").removeClass('behind');
+            $(".candidate_2 .picture").addClass('ahead');
+        }
+    });
+
+    $(".candidate_2 .lock").click(function() {
+        if($(".candidate_2 .lock").hasClass('active')){
+            $(".candidate_2 .lock").removeClass('active')
+            console.log("Candidate 2 is now UNLOCKED !");
+        } else {
+            $(".candidate_2 .lock").addClass('active')
+            console.log("Candidate 2 is now LOCKED !");
+        }
+    });
+    $(".candidate_2 .fav").click(function() {
+        if($(".candidate_2 .fav").hasClass('active')){
+            $(".candidate_2 .fav").removeClass('active')
+            console.log("Candidate 2 is now FAVED !");
+        } else {
+            $(".candidate_2 .fav").addClass('active')
+            console.log("Candidate 2 is now FAVED !");
+        }
+    });
+
+
 });
 (function() {
   var context = this;
@@ -18558,48 +18606,37 @@ $(document).ready(function() {
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-;
 (function() {
 
 
 }).call(this);
-window.onload = function () {
-                startTab();
-            };
+/* On attend que la page soit prête */
 
-            function startTab() {
-                document.getElementById("defaultOpen").click();
-            }
+$( document ).ready(function() {
 
-function openTab(evt, actionName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
+	/* On surveille les cliques sur les liens du menu */
+	$('.tab-nav .btn-matchmaker').click(function(e){
+    $('.btn-selected').removeClass('tab-nav-active')
+    $('#as-selected').removeClass('tab-active');
+    $('.btn-matchmaker').addClass('tab-nav-active')
+    $('#as-matchmaker').addClass('tab-active');
+  });
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+  $('.tab-nav .btn-selected').click(function(e){
+    $('.btn-matchmaker').removeClass('tab-nav-active')
+    $('#as-matchmaker').removeClass('tab-active');
+    $('.btn-selected').addClass('tab-nav-active')
+    $('#as-selected').addClass('tab-active');
+  })
+});
+(function() {
 
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
 
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(actionName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-;
+}).call(this);
+(function() {
+
+
+}).call(this);
 $(document).ready(function() {
     $(".my-profile .picture-self").click(function(){
         console.log("Click sur picture-self !");

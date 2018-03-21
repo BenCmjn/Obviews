@@ -1,4 +1,6 @@
 class BoardController < ApplicationController
+  before_action :authenticate_user!
+
   def random
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
@@ -44,9 +46,19 @@ class BoardController < ApplicationController
 ##################################################################
  
   def next
+    tempboard = Board.where(user_id: current_user.id)
+    board = Board.find(tempboard.ids).last
+    candidate_1 = board.users.first
+    candidate_2 = board.users.last
+    
+    ab = ArchivedBoard.new(user_id: current_user.id)
+    ab.user_ids=[candidate_1.id, candidate_2.id]
+    ab.is_match = false
+    ab.save
+    
     current_user.randomize = true
     current_user.save
-    self.random
+    
     redirect_to root_path
   end
  
@@ -58,9 +70,25 @@ class BoardController < ApplicationController
   end
  
   def match
+    tempboard = Board.where(user_id: current_user.id)
+    board = Board.find(tempboard.ids).last
+    candidate_1 = board.users.first
+    candidate_2 = board.users.last
+    
+    ab = ArchivedBoard.new(user_id: current_user.id)
+    ab.user_ids=[candidate_1.id, candidate_2.id]
+    ab.is_match = true
+    ab.save
+    
+    m = Match.new(user_id: current_user.id)
+    m.user_ids=[candidate_1.id, candidate_2.id]
+    m.save
+    
     current_user.randomize = true
     current_user.save
-  end  
+    
+    redirect_to root_path
+  end
  
 ##################################################################
  
