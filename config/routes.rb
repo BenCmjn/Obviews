@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'board#show'
 
   get 'board/show'
+  post 'board/show'
 
   get 'board/new'
 

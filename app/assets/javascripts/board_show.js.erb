@@ -1,4 +1,19 @@
 $(document).ready(function() {
+    // $.ajax({
+    //     url: "/board/show",
+    //     type: "get",
+    //     data: { lock_client: state }
+    // });
+    // console.log("Valeur du lock : " + state);
+    
+    // var state = <%= @lock_state %>;
+    var state = $('#board-lock').val();
+
+    if (!state) {
+        state = 0;
+    };
+    console.log(state);
+
     $(".candidate_1 #click-frame-pix").click(function(e) {
         if (e.target.id == "click-frame-pix") {
             console.log("PIX 1 clicked !");
@@ -30,7 +45,7 @@ $(document).ready(function() {
             console.log("Candidate 1 is now FAVED !");
         }
     });
-//------------------------------------------------------
+    //------------------------------------------------------
     $(".candidate_2 #click-frame-pix").click(function(f) {
         if (f.target.id == "click-frame-pix") {
             console.log("PIX 2 clicked !");
@@ -63,8 +78,7 @@ $(document).ready(function() {
             console.log("Candidate 2 is now FAVED !");
         }
     });
-///////////////// SWITCH LOCKS ///////////////////////////////
-    var state = 0;
+    ///////////////// SWITCH LOCKS ///////////////////////////////
 
     $(".candidate_1 .lock").click(function() {
         switch (state) {
@@ -94,10 +108,11 @@ $(document).ready(function() {
                 state = 1;
                 console.log("candidate_1 is LOCK");
                 break;
-            default:0;
+            default:
+                0;
         }
     });
-//------------------------------------------------------
+    //------------------------------------------------------
     $(".candidate_2 .lock").click(function() {
         switch (state) {
             case 0:
@@ -126,7 +141,30 @@ $(document).ready(function() {
                 state = 0;
                 console.log("Nobody is lock : Default");
                 break;
-            default:0;
+            default:
+                0;
         }
     });
+    /////////////////////////////////////////////////////// AJAX ON NEXT 
+    $(".post_lock_state").click(function() {
+        console.log("Valeur du lock : " + state);
+        $.ajax({
+            url: "/board/show",
+            type: "post",
+            data: { lock_client: state }
+        });
+        console.log("Envoyé : " + state);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 });
