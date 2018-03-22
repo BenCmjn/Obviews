@@ -9,9 +9,10 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+   def create
+     super
+     Board.create(user_id: current_user.id) if current_user.board_ids == []
+   end
 
   # DELETE /resource/sign_out
   # def destroy
