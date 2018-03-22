@@ -36,7 +36,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
  # end
   def create
     super
-    Board.create(user_id: current_user.id)
+    Board.create(user_id: current_user.id) if current_user.board_ids == []
   end
 
   #POST /resource
