@@ -2,6 +2,7 @@ class BoardController < ApplicationController
   before_action :authenticate_user!
 
   def random
+    puts 'random #1'
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
     candidate_1 = board.users.first
@@ -14,6 +15,7 @@ class BoardController < ApplicationController
       fate = ids.shuffle[0..1]
       board.user_ids = [fate[0], fate[1]]
       board.save
+      puts 'random lock 0'
     when 1
       ids = User.pluck(:id)
       ids.delete_if {|id| id == current_user.id }
@@ -21,6 +23,7 @@ class BoardController < ApplicationController
       fate[0] = candidate_1.id
       board.user_ids = [fate[0], fate[1]]
       board.save
+      puts 'random lock 1'
     when 2
       ids = User.pluck(:id)
       ids.delete_if {|id| id == current_user.id }
@@ -28,9 +31,11 @@ class BoardController < ApplicationController
       fate[1] = candidate_2.id
       board.user_ids = [fate[0], fate[1]]
       board.save
+      puts 'random lock 2'
     end
     current_user.randomize = false
     current_user.save
+    puts 'exiting random'
   end
  
   def show
@@ -60,7 +65,7 @@ class BoardController < ApplicationController
     ab.save
     
     current_user.randomize = true
-    #current_user.save
+    current_user.save
 
     #board.lock = params[:lock_client]
     #board.save!
