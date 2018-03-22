@@ -36,9 +36,8 @@ class BoardController < ApplicationController
   def show
     tempboard = Board.where(user_id: current_user.id)
     @board_id = Board.find(tempboard.ids).last.id
-
-    hidden_field_tag "board_lock", @board_lock, { :id => "board-lock" }
-
+    gon.lock = Board.find(@board_id).lock
+    byebug
     if current_user.randomize == true
       self.random
     end
@@ -64,9 +63,8 @@ class BoardController < ApplicationController
     current_user.randomize = true
     current_user.save
 
-    board.lock = params[:lock_client]
-    board.save!
-    
+    board.lock = gon.lock
+    board.save!    
     redirect_to root_path
   end
  
@@ -95,7 +93,7 @@ class BoardController < ApplicationController
     current_user.randomize = true
     current_user.save
 
-    board.lock = params[:lock_client]
+    board.lock = gon.lock
     board.save!
     
     redirect_to root_path
