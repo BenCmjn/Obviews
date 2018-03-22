@@ -19,6 +19,7 @@
     -->
     </div>
       <a target="_blank" class="CTA_button"
+      <%= link_to board_show_path %>
       <%= mail_to "#{@candidate_1.email}", "ENVOIE !", cc: "#{@candidate_2.email}", subject: "#{@candidate_1.firstname} & #{@candidate_2.firstname}, je pense que vous pourriez bien vous entendre ! ", body:"Hello #{@candidate_1.firstname} & #{@candidate_2.firstname}, 
         \n Je vous ai fait matcher sur Obviews ! Je pense que vous aimeriez vous rencontrer, pour les raisons suivantes :
         \n \n \n
@@ -26,6 +27,7 @@
         \n #{@current_user.firstname}
         \n \n Retrouvez-vous sur www.obviews.com"
         %> >
+        <% end %>
       </a>
 
     <div class="action_link">
