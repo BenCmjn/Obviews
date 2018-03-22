@@ -36,7 +36,7 @@ class BoardController < ApplicationController
   def show
     tempboard = Board.where(user_id: current_user.id)
     @board_id = Board.find(tempboard.ids).last.id
-    gon.lock = Board.find(@board_id).lock
+    #gon.lock = Board.find(@board_id).lock
     if current_user.randomize == true
       self.random
     end
@@ -62,7 +62,7 @@ class BoardController < ApplicationController
     current_user.randomize = true
     current_user.save
 
-    board.lock = gon.lock
+    #board.lock = gon.lock
     board.save!    
     redirect_to root_path
   end
@@ -92,7 +92,7 @@ class BoardController < ApplicationController
     current_user.randomize = true
     current_user.save
 
-    board.lock = gon.lock
+    #board.lock = gon.lock
     board.save!
     
     redirect_to root_path
