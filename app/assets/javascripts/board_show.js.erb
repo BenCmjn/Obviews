@@ -1,8 +1,23 @@
 $(document).ready(function() {
-    var state = 0 //gon.lock
+    // $.ajax({
+    //     url: "/board/show",
+    //     type: "get",
+    //     data: { lock_client: state }
+    // });
+    // console.log("Valeur du lock : " + state);
+    
+    // var state = <%= @lock_state %>;
+    var state = $('#board-lock').val();
+
+    if (!state) {
+        state = 0;
+    };
+    console.log(state);
+
     $(".candidate_1 #click-frame-pix").click(function(e) {
         if (e.target.id == "click-frame-pix") {
             console.log("PIX 1 clicked !");
+
             $(".candidate_1 .picture").removeClass('ahead');
             $(".candidate_1 .picture").addClass('behind');
 
@@ -73,7 +88,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('active');
                 $(".candidate_2 .lock").addClass('inactive');
                 state = 1;
-                //gon.lock = state;
                 console.log("candidate_1 is LOCK");
                 break;
             case 1:
@@ -83,7 +97,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('active');
                 $(".candidate_2 .lock").addClass('inactive');
                 state = 0;
-                //gon.lock = state;
                 console.log("Nobody is lock : Default");
                 break;
             case 2:
@@ -93,7 +106,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").addClass('inactive');
                 console.log("candidate_2 is UNlock");
                 state = 1;
-                //gon.lock = state;
                 console.log("candidate_1 is LOCK");
                 break;
             default:
@@ -109,7 +121,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('inactive');
                 $(".candidate_2 .lock").addClass('active');
                 state = 2;
-                //gon.lock = state;
                 console.log("candidate_2 is LOCK");
                 break;
             case 1:
@@ -119,7 +130,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('inactive');
                 $(".candidate_2 .lock").addClass('active');
                 state = 2;
-                //gon.lock = state;
                 console.log("candidate_2 is LOCK");
                 break;
             case 2:
@@ -129,7 +139,6 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").addClass('inactive');
                 console.log("candidate_2 is UNlock");
                 state = 0;
-                //gon.lock = state;
                 console.log("Nobody is lock : Default");
                 break;
             default:
@@ -137,4 +146,25 @@ $(document).ready(function() {
         }
     });
     /////////////////////////////////////////////////////// AJAX ON NEXT 
+    $(".post_lock_state").click(function() {
+        console.log("Valeur du lock : " + state);
+        $.ajax({
+            url: "/board/show",
+            type: "post",
+            data: { lock_client: state }
+        });
+        console.log("Envoyé : " + state);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 });
