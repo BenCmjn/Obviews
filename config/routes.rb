@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'users/show'
   get 'users/carousel', to: 'users#carousel'
+  get 'users/ranking' , to: 'users#ranking'
 
   root 'board#show'
 
