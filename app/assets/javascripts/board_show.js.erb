@@ -1,8 +1,8 @@
 $(document).ready(function() {
+    var state = gon.lock
     $(".candidate_1 #click-frame-pix").click(function(e) {
         if (e.target.id == "click-frame-pix") {
             console.log("PIX 1 clicked !");
-
             $(".candidate_1 .picture").removeClass('ahead');
             $(".candidate_1 .picture").addClass('behind');
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
             console.log("Candidate 1 is now FAVED !");
         }
     });
-//------------------------------------------------------
+    //------------------------------------------------------
     $(".candidate_2 #click-frame-pix").click(function(f) {
         if (f.target.id == "click-frame-pix") {
             console.log("PIX 2 clicked !");
@@ -63,8 +63,7 @@ $(document).ready(function() {
             console.log("Candidate 2 is now FAVED !");
         }
     });
-///////////////// SWITCH LOCKS ///////////////////////////////
-    var state = 0;
+    ///////////////// SWITCH LOCKS ///////////////////////////////
 
     $(".candidate_1 .lock").click(function() {
         switch (state) {
@@ -74,6 +73,7 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('active');
                 $(".candidate_2 .lock").addClass('inactive');
                 state = 1;
+                gon.lock = state;
                 console.log("candidate_1 is LOCK");
                 break;
             case 1:
@@ -83,6 +83,7 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('active');
                 $(".candidate_2 .lock").addClass('inactive');
                 state = 0;
+                gon.lock = state;
                 console.log("Nobody is lock : Default");
                 break;
             case 2:
@@ -92,12 +93,14 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").addClass('inactive');
                 console.log("candidate_2 is UNlock");
                 state = 1;
+                gon.lock = state;
                 console.log("candidate_1 is LOCK");
                 break;
-            default:0;
+            default:
+                0;
         }
     });
-//------------------------------------------------------
+    //------------------------------------------------------
     $(".candidate_2 .lock").click(function() {
         switch (state) {
             case 0:
@@ -106,6 +109,7 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('inactive');
                 $(".candidate_2 .lock").addClass('active');
                 state = 2;
+                gon.lock = state;
                 console.log("candidate_2 is LOCK");
                 break;
             case 1:
@@ -115,6 +119,7 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").removeClass('inactive');
                 $(".candidate_2 .lock").addClass('active');
                 state = 2;
+                gon.lock = state;
                 console.log("candidate_2 is LOCK");
                 break;
             case 2:
@@ -124,9 +129,12 @@ $(document).ready(function() {
                 $(".candidate_2 .lock").addClass('inactive');
                 console.log("candidate_2 is UNlock");
                 state = 0;
+                gon.lock = state;
                 console.log("Nobody is lock : Default");
                 break;
-            default:0;
+            default:
+                0;
         }
     });
+    /////////////////////////////////////////////////////// AJAX ON NEXT 
 });

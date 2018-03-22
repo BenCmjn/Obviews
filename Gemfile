@@ -20,7 +20,7 @@ gem 'rspec-rails'
 gem 'paperclip'
 gem 'mailjet'
 gem 'aws-sdk', '~> 2.3'
-
+gem 'gon'
 
 group :development, :test do
 
