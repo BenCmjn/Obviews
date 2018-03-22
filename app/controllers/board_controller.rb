@@ -37,7 +37,6 @@ class BoardController < ApplicationController
     tempboard = Board.where(user_id: current_user.id)
     @board_id = Board.find(tempboard.ids).last.id
     gon.lock = Board.find(@board_id).lock
-    byebug
     if current_user.randomize == true
       self.random
     end
