@@ -18,33 +18,15 @@
       </div>
     -->
     </div>
-
-    <div class="selected-names">
-      <%= @candidate_1.firstname %> &amp; <%= @candidate_2.firstname %>…
-    </div>
-
-
-    <div class="input-area">
-
-      <%= form_tag("/board/confirmation") do %>
-        <%= text_field_tag(:intro) %>
-        <%= submit_tag("enregistrer") %>
-        <% @a = params[:intro] %>
-        
-      <% end %>
-    </div>
-    <div class="selected-names">
-      Vous allez envoyer ce message à <br>
-      <%= @candidate_1.firstname %> &amp; <%= @candidate_2.firstname %> :
-    </div> 
-    <div class= "field1">
-
-      <%=params[:intro]%>
-      <br>
-    </div>
-      <br>
-      <%= mail_to "#{@candidate_1.email}", "ENVOIE !", cc: "#{@candidate_2.email}", subject: "#{@current_user.firstname} #{@current_user.lastname} pense que vous pourriez bien vous entendre ! ", body:"Voila le message qu'il vous a envoyé : #{@a}" %>
-    
+      <a target="_blank" class="CTA_button"
+      <%= mail_to "#{@candidate_1.email}", "ENVOIE !", cc: "#{@candidate_2.email}", subject: "#{@candidate_1.firstname} & #{@candidate_2.firstname}, je pense que vous pourriez bien vous entendre ! ", body:"Hello #{@candidate_1.firstname} & #{@candidate_2.firstname}, 
+        \n Je vous ai fait matcher sur Obviews ! Je pense que vous aimeriez vous rencontrer, pour les raisons suivantes :
+        \n \n \n
+        \n A très vite,
+        \n #{@current_user.firstname}
+        \n \n Retrouvez-vous sur www.obviews.com"
+        %> >
+      </a>
 
     <div class="action_link">
       <%= link_to "Annuler", root_path %>
