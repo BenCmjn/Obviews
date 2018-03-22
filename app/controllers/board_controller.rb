@@ -37,8 +37,6 @@ class BoardController < ApplicationController
     tempboard = Board.where(user_id: current_user.id)
     @board_id = Board.find(tempboard.ids).last.id
 
-    hidden_field_tag "board_lock", @board_lock, { :id => "board-lock" }
-
     if current_user.randomize == true
       self.random
     end
