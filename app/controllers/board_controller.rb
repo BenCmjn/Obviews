@@ -62,8 +62,8 @@ class BoardController < ApplicationController
     current_user.randomize = true
     current_user.save
 
-    board.lock = params[:lock_client]
-    board.save!
+    #board.lock = params[:lock_client]
+    #board.save!
     
     redirect_to root_path
   end
