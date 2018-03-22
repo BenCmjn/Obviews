@@ -90,16 +90,27 @@ class BoardController < ApplicationController
     ab.is_match = true
     ab.save
     
+    puts "\n#{candidate_1.firstname}'s karma before = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.first.karma}\n"
+    puts "#{candidate_2.firstname}'s karma before = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.last.karma}\n"
+    puts "#{current_user.firstname}(matchmaker) karma before = #{current_user.karma}"
     m = Match.new(user_id: current_user.id)
     m.user_ids=[candidate_1.id, candidate_2.id]
+    candidate_1.karma += 1
+    candidate_2.karma += 1
+    candidate_1.save!
+    candidate_2.save!
     m.save
     
     current_user.randomize = true
+    current_user.karma += 2
     current_user.save
 
     board.lock = params[:lock_client]
     board.save!
-    
+
+    puts "\n#{candidate_1.firstname}'s karma after = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.first.karma}\n"
+    puts "#{candidate_2.firstname}'s karma after = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.last.karma}\n"
+    puts "#{current_user.firstname}(matchmaker) karma after = #{current_user.karma}"
     redirect_to root_path
   end
  

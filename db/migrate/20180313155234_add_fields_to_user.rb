@@ -5,7 +5,7 @@ class AddFieldsToUser < ActiveRecord::Migration[5.1]
     add_column :users, :bio, :text
     add_column :users, :phone, :string
     add_column :users, :match_count, :integer
-    add_column :users, :score, :integer
+    add_column :users, :karma, :integer, default: 10
     add_column :users, :city, :string
     add_column :users, :gender, :integer
   end
