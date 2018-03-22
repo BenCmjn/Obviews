@@ -29,6 +29,7 @@
       <%= form_tag("/board/confirmation") do %>
         <%= text_field_tag(:intro) %>
         <%= submit_tag("enregistrer") %>
+        <% @a = params[:intro] %>
         
       <% end %>
     </div>
@@ -42,10 +43,18 @@
       <br>
     </div>
       <br>
-      <%= link_to 'Valider', match_path, class: "action-button" %>
+      <%= mail_to "#{@candidate_1.email}", "ENVOIE !", cc: "#{@candidate_2.email}", subject: "#{@current_user.firstname} #{@current_user.lastname} pense que vous pourriez bien vous entendre ! ", body:"Voila le message qu'il vous a envoyé : #{@a}" %>
     
 
     <div class="action_link">
       <%= link_to "Annuler", root_path %>
     </div>
 </div>
+
+
+
+<!--     <div class="CTA_button">
+          <a href='#'>ENVOIE !</a>
+    </div> -->
+
+
