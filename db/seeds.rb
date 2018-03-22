@@ -6,26 +6,23 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.new(firstname:"Jules", lastname:"Rigomont", email:"rigomontj@gmail.com", password:"coucou", password_confirmation:"coucou")
+user1 = User.new(bio: "Mais cette feature c'est 5min, montre en main hein, t'inquiètes...", firstname:"Jules", lastname:"Rigomont", email:"julesrigomont@gmail.com", password:"coucou", password_confirmation:"coucou")
 user1.save
-board1 = Board.create(user_id: user1.id)
 
-user2= User.new(firstname:"Benjamin", lastname:"Calméjane", email:"bencmjn@gmail.com", password:"coucou", password_confirmation:"coucou")
+user2= User.new(bio: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAhhhh!!!!!", firstname:"Benjamin", lastname:"Calméjane", email:"benjamincalmejane@gmail.com", password:"coucou", password_confirmation:"coucou")
 user2.save
-board2 = Board.create(user_id: user2.id)
 
-user3 = User.new(firstname:"Charles", lastname:"Dacquay", email:"charlesdacquay@gmail.com", password:"coucou", password_confirmation:"coucou")
+user3 = User.new(bio: "T'es le meilleur.", firstname:"Charles", lastname:"Dacquay", email:"charlesdacquay@gmail.com", password:"coucou", password_confirmation:"coucou")
 user3.save
-board3 = Board.create(user_id: user3.id)
 
-user4 = User.new(firstname:"Félix", lastname:"Gaudé", email:"rigomontj@gmail.com", password:"coucou", password_confirmation:"coucou")
+user4 = User.new(bio: "Alors sinon on peut faire des stickers THP...", firstname:"Félix", lastname:"Gaudé", email:"felixgaude@gmail.com", password:"coucou", password_confirmation:"coucou")
 user4.save
-board4 = Board.create(user_id: user4.id)
 
-user5 = User.new(firstname:"Ségolène", lastname:"Alquier", email:"segolenealquier@gmail.com", password:"coucou", password_confirmation:"coucou")
+user5 = User.new(bio: "Salut! Tu vas au CIDJ vendredi?", firstname:"Ségolène", lastname:"Alquier", email:"segolenealquier@gmail.com", password:"coucou", password_confirmation:"coucou")
 user5.save
-board5 = Board.create(user_id: user5.id)
 
-user6 = User.new(firstname:"Thomas", lastname:"Darrigade", email:"thomasdarrigade@gmail.com", password:"coucou", password_confirmation:"coucou")
+user6 = User.new(bio: "Algo floco is my credo.", firstname:"Antonin", lastname:"Siguier", email:"antoninsiguier@gmail.com", password:"coucou", password_confirmation:"coucou")
 user6.save
-board6 = Board.create(user_id: user6.id)
+
+user7 = User.new(bio: "Mailjet cest vraiment génial!!!", firstname:"Thomas", lastname:"Darrigade", email:"thomasdarrigade@gmail.com", password:"coucou", password_confirmation:"coucou")
+user7.save
