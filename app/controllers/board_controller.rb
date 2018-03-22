@@ -8,15 +8,14 @@ class BoardController < ApplicationController
     candidate_1 = board.users.first
     candidate_2 = board.users.last
     lock = board.lock
-    case lock
-    when 0
+    if lock = 0
       ids = User.pluck(:id)
       ids.delete_if {|id| id == current_user.id }
       fate = ids.shuffle[0..1]
       board.user_ids = [fate[0], fate[1]]
       board.save
       puts 'random lock 0'
-    when 1
+    elsif lock = 1
       ids = User.pluck(:id)
       ids.delete_if {|id| id == current_user.id }
       fate = ids.shuffle[0..1]
@@ -24,7 +23,7 @@ class BoardController < ApplicationController
       board.user_ids = [fate[0], fate[1]]
       board.save
       puts 'random lock 1'
-    when 2
+    elsif lock = 2
       ids = User.pluck(:id)
       ids.delete_if {|id| id == current_user.id }
       fate = ids.shuffle[0..1]
