@@ -196,7 +196,7 @@
     }
 }
 
-.material-icons {
+.material-icons.inactive {
     opacity: .3
 }
 
@@ -211,4 +211,11 @@
     width: 48px;
     height: 48px;
     border: 2px solid white;
+}
+
+.message{
+    
+    color: #F2C94C;
+    font-style: italic;
+
 }

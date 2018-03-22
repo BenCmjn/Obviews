@@ -10,6 +10,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'jquery-slick-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootstrap', '~> 4.0.0'
@@ -19,7 +20,7 @@ gem 'rspec-rails'
 gem 'paperclip'
 gem 'mailjet'
 gem 'aws-sdk', '~> 2.3'
-
+gem 'gon'
 
 group :development, :test do
 
