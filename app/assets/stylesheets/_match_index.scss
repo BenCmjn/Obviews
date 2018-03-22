@@ -1,20 +1,16 @@
-// Place all the styles related to the Match controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.container-match-index i {
-  color: white;
-  font-size: 30px;
-}
-
 .container-match-index {
-  display: flex;
-  flex-direction: row;
+  margin-top: 20px;
+  i {
+    color: white;
+    font-size: 30px;
+    float: left;
+  }
   h1 {
-      font-family: "Kalam";
-      font-size: 24px;
-      font-weight: bold;
-      color: white;
+    font-family: "Kalam";
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
   }
 }
 
@@ -37,42 +33,34 @@
     padding: 5px 5px;
     transition: 0.3s;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    // border: 1px solid rgba(255, 255, 255, 0.5);
     color: rgba(255, 255, 255, 0.5);
     i {
         color: white;
-        opacity: 1;
+        opacity: 0.5;
     }
-}
-
-/* Change background color of buttons on hover */
-
-.tab-nav button i:hover {
-    color: #38FC8C;
 }
 
 /* Create an active/current tablink class */
 
 .tab-nav button.tab-nav-active {
     background-color: black;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    border-top-width: 2px;
-    border-top-color: #38FC8C;
+    // border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #38FC8C;
     color: white;
     i {
-        color: #38FC8C;
         opacity: 1;
     }
 }
 
-
-/* Style the tab content */
+/* Style the tab content - with the match lists */
 
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     border-top: none;
     animation: fadeEffect 1s;
 }
@@ -80,7 +68,7 @@
 .tab-active {
     display: block;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    // border: 1px solid #ccc;
     border-top: none;
     animation: fadeEffect 1s;
 }
