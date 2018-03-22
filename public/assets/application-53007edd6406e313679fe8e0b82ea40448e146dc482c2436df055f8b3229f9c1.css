@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -10179,7 +10180,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* line 199, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
-.material-icons {
+.material-icons.inactive {
   opacity: 0.3;
 }
 
@@ -10194,6 +10195,12 @@ a.text-dark:hover, a.text-dark:focus {
   width: 48px;
   height: 48px;
   border: 2px solid white;
+}
+
+/* line 216, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_board.scss */
+.message {
+  color: #F2C94C;
+  font-style: italic;
 }
 
 /* line 1, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_share.scss */
@@ -10347,7 +10354,7 @@ textarea {
   padding: 10px;
 }
 
-/* line 1, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+/* line 3, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
 .container-registration {
   display: flex;
   flex-direction: column;
@@ -10357,22 +10364,84 @@ textarea {
   padding: 0;
   color: white;
 }
-
-/* line 12, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
-.picture-edit img {
-  width: 100%;
-  border: 1px solid white;
+/* line 11, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.container-registration .action-button {
+  margin-top: 20px;
+}
+/* line 14, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.container-registration .action-button:hover {
+  margin-top: 20px;
+}
+/* line 17, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.container-registration .CTA_button {
+  margin-bottom: 10px;
 }
 
-/* line 18, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+/* line 23, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.container-registration h1 {
+  font-family: "Kalam";
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 50px;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  -webkit-writing-mode: lr-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: lr-tb;
+}
+
+/* line 38, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+#form_part1.form-active {
+  display: block;
+  width: 94%;
+}
+/* line 41, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+#form_part1.form-active .action-button {
+  width: 94%;
+  margin: auto;
+  margin-top: 75px;
+}
+
+/* line 48, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+#form_part1.form-unactive {
+  display: none;
+}
+
+/* line 52, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+#form_part2.form-unactive {
+  display: none;
+}
+
+/* line 56, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+#form_part2.form-active {
+  display: block;
+}
+
+/* line 62, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
 .field {
-  width: 100%;
   padding-top: 20px;
   background-color: black;
   border-color: white;
 }
+/* line 66, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.field :focus {
+  outline-color: #F2C94C;
+}
 
-/* line 25, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+/* line 71, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.field1 {
+  border: 1px solid white;
+  background-color: inherit;
+  color: rgba(255, 255, 255, 0.5);
+  width: 94%;
+  font-family: "Open sans";
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* line 81, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
 .actions {
   background-color: #38FC8C;
   font-family: "Kalam";
@@ -10384,37 +10453,7 @@ textarea {
   margin: 30px 10px;
 }
 
-/* line 36, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
-.field1 {
-  border: 1px solid white;
-  background-color: inherit;
-  color: rgba(255, 255, 255, 0.5);
-  width: 94%;
-  font-family: "Open sans";
-  font-size: 14px;
-  padding: 10px;
-}
-
-/* line 46, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
-.field1:focus {
-  outline-color: #F2C94C;
-}
-
-/* line 50, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
-.container-registration h1 {
-  font-family: "Kalam";
-  font-weight: bold;
-  color: white;
-  font-size: 24px;
-  -webkit-transform: rotate(-4deg);
-  -moz-transform: rotate(-4deg);
-  -o-transform: rotate(-4deg);
-  -webkit-writing-mode: lr-tb;
-      -ms-writing-mode: lr-tb;
-          writing-mode: lr-tb;
-}
-
-/* line 64, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+/* line 92, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
 input[type=submit] {
   background-color: #38FC8C;
   border-radius: 4px;
@@ -10422,11 +10461,10 @@ input[type=submit] {
   font-weight: bold;
 }
 
-/* line 72, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
-.white-text {
-  font-family: "Open sans";
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.5);
+/* line 102, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_registration.scss */
+.picture-edit img {
+  width: 100%;
+  border: 1px solid white;
 }
 
 /* line 5, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
@@ -10450,14 +10488,14 @@ input[type=submit] {
 
 /* Style the tab */
 /* line 23, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab {
+.tab-nav {
   overflow: hidden;
   background-color: black;
 }
 
 /* Style the buttons that are used to open the tab content */
 /* line 30, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab button {
+.tab-nav button {
   width: 50%;
   background-color: inherit;
   float: left;
@@ -10471,19 +10509,20 @@ input[type=submit] {
   color: rgba(255, 255, 255, 0.5);
 }
 /* line 42, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab button i {
+.tab-nav button i {
   color: white;
+  opacity: 1;
 }
 
 /* Change background color of buttons on hover */
 /* line 50, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab button i:hover {
+.tab-nav button i:hover {
   color: #38FC8C;
 }
 
 /* Create an active/current tablink class */
-/* line 57, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab button.active {
+/* line 56, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+.tab-nav button.tab-nav-active {
   background-color: black;
   border: 1px solid #ccc;
   border-bottom: none;
@@ -10491,9 +10530,10 @@ input[type=submit] {
   border-top-color: #38FC8C;
   color: white;
 }
-/* line 64, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
-.tab button.active i {
+/* line 63, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+.tab-nav button.tab-nav-active i {
   color: #38FC8C;
+  opacity: 1;
 }
 
 /* Style the tab content */
@@ -10505,7 +10545,16 @@ input[type=submit] {
   border-top: none;
   -webkit-animation: fadeEffect 1s;
           animation: fadeEffect 1s;
-  /* Fading effect takes 1 second */
+}
+
+/* line 80, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+.tab-active {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  -webkit-animation: fadeEffect 1s;
+          animation: fadeEffect 1s;
 }
 
 /* Go from zero to full opacity */
@@ -10526,7 +10575,7 @@ input[type=submit] {
   }
 }
 /* TEXTS */
-/* line 97, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 101, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div {
   border: 1px solid white;
   width: 100%;
@@ -10535,7 +10584,7 @@ input[type=submit] {
   margin-bottom: 10px;
 }
 
-/* line 105, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 109, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div-img {
   width: 100%;
   padding: 10px;
@@ -10544,23 +10593,23 @@ input[type=submit] {
   justify-content: space-between;
 }
 
-/* line 113, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 117, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div-1 {
   width: 33%;
 }
 
-/* line 117, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 121, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div-2 {
   width: 33%;
   margin: auto;
 }
 
-/* line 122, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 126, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div-3 {
   width: 33%;
 }
 
-/* line 126, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 130, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .selected-name {
   text-align: center;
   color: white;
@@ -10571,7 +10620,7 @@ input[type=submit] {
 }
 
 /* IMAGES */
-/* line 138, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 142, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .image-self {
   height: 60px;
   width: 60px;
@@ -10582,7 +10631,7 @@ input[type=submit] {
   border-style: solid;
 }
 
-/* line 149, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
+/* line 153, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_match_index.scss */
 .match-div-img img {
   height: 80px;
   width: 80px;
@@ -10688,7 +10737,7 @@ p.bio-description-self {
   line-height: none;
 }
 
-/* line 92, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 91, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .karma-score {
   color: #F2C94C;
   text-align: center;
@@ -10698,12 +10747,22 @@ p.bio-description-self {
   padding: 10px;
 }
 
-/* line 101, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 100, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+.exit-icon {
+  color: #F2C94C;
+}
+
+/* line 104, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+.exit-icon:hover {
+  color: #38FC8C;
+}
+
+/* line 108, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .action_link_user-show {
   margin: auto;
 }
 
-/* line 105, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 112, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button {
   border-width: 1.5px;
   border-style: solid;
@@ -10714,14 +10773,14 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px 30px;
 }
-/* line 114, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 121, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-share-button a {
   text-decoration: none;
   color: white;
   font-weight: lighter;
 }
 
-/* line 121, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 128, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button {
   border-color: #38FC8C;
   border-width: 3px;
@@ -10735,19 +10794,401 @@ p.bio-description-self {
   border-radius: 2px;
   margin: 5px 10px;
 }
-/* line 133, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
+/* line 140, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_user_show.scss */
 .fb-action-button a {
   text-decoration: none;
   color: #38FC8C;
 }
 
-/* line 10, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* Slider */
+/* line 2, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 21, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 31, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-list:focus {
+  outline: none;
+}
+
+/* line 35, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* line 41, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 51, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 61, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+/* line 68, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-track:after {
+  clear: both;
+}
+
+/* line 72, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+/* line 77, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+/* line 85, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+/* line 89, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slide img {
+  display: block;
+}
+
+/* line 93, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+/* line 97, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+/* line 101, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+/* line 105, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+/* line 109, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+/* line 117, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick.css */
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+/* line 3, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-loading .slick-list {
+  background: #fff url(/assets/slick/ajax-loader-e7b44c86b050fca766a96ddac2d0932af0126da6f2305280342d909168dcce6b.gif) center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot);
+  src: url(/assets/slick-06d80cf01250132fd1068701108453feee68854b750d22c344ffc0de395e1dcb.eot?#iefix) format("embedded-opentype"), url(/assets/slick-26726bac4060abb1226e6ceebc1336e84930fe7a7af1b3895a109d067f5b5dcc.woff) format("woff"), url(/assets/slick-37bc99cfdbbc046193a26396787374d00e7b10d3a758a36045c07bd8886360d2.ttf) format("truetype"), url(/assets/slick-8ca11b5fcbff92ee6378017cf6832dddfa745253202d7c8d01f42d5d17c4cb5c.svg#slick) format("svg");
+}
+/* Arrows */
+/* line 22, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* line 45, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+
+/* line 54, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+/* line 61, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: .25;
+}
+
+/* line 67, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 81, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev {
+  left: -25px;
+}
+
+/* line 85, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+[dir='rtl'] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+
+/* line 90, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-prev:before {
+  content: '←';
+}
+
+/* line 94, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+[dir='rtl'] .slick-prev:before {
+  content: '→';
+}
+
+/* line 99, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-next {
+  right: -25px;
+}
+
+/* line 103, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+[dir='rtl'] .slick-next {
+  right: auto;
+  left: -25px;
+}
+
+/* line 108, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-next:before {
+  content: '→';
+}
+
+/* line 112, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+[dir='rtl'] .slick-next:before {
+  content: '←';
+}
+
+/* Dots */
+/* line 118, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-slider {
+  margin-bottom: 30px;
+}
+
+/* line 123, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots {
+  position: absolute;
+  bottom: -45px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 137, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* line 150, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+/* line 168, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+/* line 173, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+/* line 178, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 200, /Users/segolenealquier/.rvm/gems/ruby-2.3.4/gems/jquery-slick-rails-1.8.1/app/assets/stylesheets/slick-theme.css.erb */
+.slick-dots li.slick-active button:before {
+  opacity: .75;
+  color: black;
+}
+
+/* CAROUSEL */
+/* line 4, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.scroller div {
+  text-align: center;
+  font-size: 24px;
+}
+/* line 8, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.scroller h1 {
+  color: white;
+  font-size: 1em;
+  font-family: "Kalam";
+  font-size: 26px;
+}
+/* line 14, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.scroller p {
+  color: #F2C94C;
+  font-size: 0.6em;
+  font-family: 'Open sans';
+  font-weight: bold;
+}
+
+/* line 23, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.container-carousel .action_link {
+  font-family: "Kalam";
+  font-size: 18px;
+  font-weight: bold;
+  color: #F2C94C;
+  text-decoration: none;
+  padding: 8px 40px;
+  letter-spacing: 2px;
+  margin: 10px 10px 20px 10px;
+  text-align: center;
+}
+/* line 34, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.container-carousel .CTA_button {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* line 40, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.container-carousel-top {
+  padding: 20px 20px;
+}
+
+/* line 44, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.slick-prev::before, .slick-next::before {
+  color: white;
+}
+
+/* line 48, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.slick-next {
+  right: -5px;
+}
+
+/* line 52, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.slick-prev {
+  left: -5px;
+}
+
+/* line 56, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.slick-dots li button:before {
+  color: white;
+  opacity: 0.7;
+}
+
+/* line 61, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/_carousel.scss */
+.slick-dots li.slick-active button:before {
+  color: #38FC8C;
+  opacity: 1;
+}
+
+/* line 13, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 body {
   background-color: #141424;
   display: flex;
 }
 
-/* line 15, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 18, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 #central-container {
   border-style: solid;
   background-color: black;
@@ -10759,7 +11200,7 @@ body {
 }
 
 /* ACTION BUTTONS */
-/* line 28, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 31, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .CTA_button {
   background-color: #38FC8C;
   font-family: "Kalam";
@@ -10771,19 +11212,19 @@ body {
   border-radius: 2px;
   margin: 30px 10px;
 }
-/* line 38, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 41, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .CTA_button a {
   text-decoration: none;
   color: black;
 }
 
-/* line 44, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 47, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .CTA_button:hover a {
   text-decoration: none;
   color: black;
 }
 
-/* line 49, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 52, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action_link a {
   font-family: "Kalam";
   font-size: 18px;
@@ -10795,12 +11236,12 @@ body {
   margin: 20px 10px;
 }
 
-/* line 60, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 63, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action_link:hover a {
   text-decoration: none;
 }
 
-/* line 64, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 67, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action-button {
   border: 2px solid #38FC8C;
   font-family: "Kalam";
@@ -10811,7 +11252,7 @@ body {
   text-align: center;
   padding: 0.2em 1.2em;
 }
-/* line 73, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 76, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action-button:hover {
   background-color: #38FC8C;
   font-weight: bold;
@@ -10819,18 +11260,18 @@ body {
   text-decoration: none;
 }
 
-/* line 82, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 84, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action-button a {
   text-decoration: none;
   color: #38FC8C;
 }
-/* line 85, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 87, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .action-button a:hover {
   color: black !important;
 }
 
 /* TEXT */
-/* line 93, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
+/* line 95, /Users/segolenealquier/Documents/PROG/TheHackingProject/Semaine_10/Obviews/app/assets/stylesheets/application.scss */
 .user-name-display {
   display: inline-flex;
   font-family: 'Open Sans', sans-serif;
