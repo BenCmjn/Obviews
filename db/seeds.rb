@@ -24,5 +24,11 @@ user5.save
 user6 = User.new(bio: "Algo floco is my credo.", firstname:"Antonin", lastname:"Siguier", email:"antoninsiguier@gmail.com", password:"coucou", password_confirmation:"coucou")
 user6.save
 
-user7 = User.new(bio: "Mailjet cest vraiment génial!!!", firstname:"Thomas", lastname:"Darrigade", email:"thomasdarrigade@gmail.com", password:"coucou", password_confirmation:"coucou")
+user7 = User.new(bio: "Mailjet c'est vraiment génial!!!", firstname:"Thomas", lastname:"Darrigade", email:"thomasdarrigade@gmail.com", password:"coucou", password_confirmation:"coucou")
 user7.save
+
+user8 = User.new(bio: "Je n'ai jamais fait de front, mais je vais m'occuper de retirer l'étoile. 5min.", firstname:"Jean-Michel", lastname:"Fignollo", email:"jeanmichelfignollo@gmail.com", password:"coucou", password_confirmation:"coucou")
+user8.save
+
+user9 = User.new(bio: "Quelqu'un aurait un stylo par hasard?", firstname:"Jean-Michel", lastname:"Feuilles Volantes", email:"jeanmichelfeuillesvolantes@gmail.com", password:"coucou", password_confirmation:"coucou")
+user9.save
