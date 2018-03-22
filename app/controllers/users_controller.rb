@@ -4,4 +4,8 @@ class UsersController < ApplicationController
 
   def carousel
   end
+
+  def ranking
+  	
+  end
 end
