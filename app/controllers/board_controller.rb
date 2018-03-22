@@ -60,7 +60,7 @@ class BoardController < ApplicationController
     ab.save
     
     current_user.randomize = true
-    current_user.save
+    #current_user.save
 
     #board.lock = params[:lock_client]
     #board.save!
