@@ -30,6 +30,14 @@ ActiveRecord::Schema.define(version: 20180320140223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.text "candidate_1_picture"
+    t.string "candidate_1_firstname"
+    t.string "candidate_1_lastname"
+    t.text "candidate_1_bio"
+    t.text "candidate_2_picture"
+    t.string "candidate_2_firstname"
+    t.string "candidate_2_lastname"
+    t.text "candidate_2_bio"
   end
 
   create_table "boards_users", id: false, force: :cascade do |t|
