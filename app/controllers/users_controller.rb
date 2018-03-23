@@ -11,5 +11,6 @@ class UsersController < ApplicationController
   end
 
   def ranking
+    @bestusers = User.all.order(:karma).reverse
   end
 end

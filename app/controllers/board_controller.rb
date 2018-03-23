@@ -1,5 +1,12 @@
 class BoardController < ApplicationController
-  before_action :authenticate_user!
+
+before_action :my_authentication
+
+def my_authentication
+     unless user_signed_in? 
+        redirect_to users_carousel_path
+     end
+end
 
   def random
     puts 'random #1'
@@ -111,7 +118,7 @@ class BoardController < ApplicationController
     puts "\n#{candidate_1.firstname}'s karma after = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.first.karma}\n"
     puts "#{candidate_2.firstname}'s karma after = #{Board.find(Board.where(user_id: current_user.id).ids).last.users.last.karma}\n"
     puts "#{current_user.firstname}(matchmaker) karma after = #{current_user.karma}"
-    redirect_to root_path
+    redirect_to board_share_path
   end
  
 ##################################################################
