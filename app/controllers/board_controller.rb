@@ -8,15 +8,20 @@ before_action :my_authentication
   end
 
   def random
+    puts '================'
+    puts '================'
+    puts '==RANDOM START=='
+    puts '================'
+    puts '================'
+
     tempboard = Board.where(user_id: current_user.id)
     board = Board.find(tempboard.ids).last
-    candidate_1 = board.users.first
-    candidate_2 = board.users.last
-    
+
     ids = User.pluck(:id)
     ids.delete_if {|id| id == current_user.id }
     fate = ids.shuffle[0..1]
     board.user_ids = [fate[0], fate[1]]
+    board.users = [User.find(fate[0]), User.find(fate[1])]
     board.save
     
     current_user.randomize = false
