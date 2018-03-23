@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :firstname, presence: true, length: { in: 2..50 }
   validates :lastname, presence: true, length: { in: 2..50 }
 
+  validates :picture, presence: true
+
   #FRENCH_PHONE_REGEX = ^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$
   #validates :lastname, presence: true, length: { in: 2..50 }
   #validates :bio, presence: true
