@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180320140223) do
+=======
+ActiveRecord::Schema.define(version: 20180314130717) do
+>>>>>>> 04016aaf0b8a2fc66827ead7593636b7aaa6eacf
 
   create_table "archived_boards", force: :cascade do |t|
     t.integer "user_id"
@@ -30,6 +34,14 @@ ActiveRecord::Schema.define(version: 20180320140223) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.text "candidate_1_picture"
+    t.string "candidate_1_firstname"
+    t.string "candidate_1_lastname"
+    t.text "candidate_1_bio"
+    t.text "candidate_2_picture"
+    t.string "candidate_2_firstname"
+    t.string "candidate_2_lastname"
+    t.text "candidate_2_bio"
   end
 
   create_table "boards_users", id: false, force: :cascade do |t|
