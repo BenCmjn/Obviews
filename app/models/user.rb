@@ -19,7 +19,7 @@ class User < ApplicationRecord
   #validates :bio, presence: true
   #validates :phone, presence: true, format: { with: FRENCH_PHONE_REGEX }
 
-  has_attached_file :avatar, styles: { medium: "300x300", thumb: "100x100" }  # Can't seed db if these lines aren't commented
+  has_attached_file :avatar, styles: { medium: "300x300", thumb: "100x100" }, :default_url => ":style/missing_avatar.png"  # Can't seed db if these lines aren't commented
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/    # Can't seed db if these lines aren't commented
-
+  
 end
