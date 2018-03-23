@@ -17,29 +17,34 @@
           <span class="user-name-display"><%= current_user.firstname %> <%= current_user.lastname %></span>
             <%= link_to edit_user_registration_path do %>
               <i class="material-icons material-icons-edit" style="font-size: 30px">mode_edit</i>
-              <% end %>
+            <% end %>
         </div>
       </div>
     </div>
 
     <div class="karma-score">
-      Karma: <%= current_user.karma %>
-    </div>
-
-    <a class="action-button" href="/match/index" >Mes views</a>
-
-    <div>
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fobviews-dev.herokuapp.com&layout=button&size=large&mobile_iframe=true&width=89&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
-
-    <% if user_signed_in? %>
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="material-icons exit-icon" style="font-size: 30px">exit_to_app</i>
+      <div>
+        <span class="emoji" style="font-size: 25px">✨</span><span> <%= current_user.karma %></span>
+      </div>
+      <div><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fobviews-dev.herokuapp.com&layout=button&size=large&mobile_iframe=true&width=89&height=28&appId" width="89" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe></div>
+      <div>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="material-icons exit-icon" style="font-size: 25px">exit_to_app</i>
+        <% end %>
       <% end %>
-    <% end %>
+      </div>
+    </div>
 
+    <div class="views-button">
+      <%= link_to "Mes views", match_index_path %>
+    </div>
+
+    <div class="action-button ranking-button">
+      <%= link_to "Classement", users_ranking_path %>
+    </div>
 
     <div class="action_link action_link_user-show">
-      <a href='/board/show'>Retour</a>
+      <%= link_to "Retour", board_show_path %>
     </div>
 </div>
