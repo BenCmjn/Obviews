@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20180320140223) do
     t.text "bio"
     t.string "phone"
     t.integer "match_count"
-    t.integer "karma", default: 0
+    t.integer "karma", default: 10
     t.string "city"
     t.integer "gender"
     t.text "picture"

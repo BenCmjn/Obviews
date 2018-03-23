@@ -17,7 +17,11 @@
 </div>
 
 <!-- MIDDLE -->
+
 <div class= "middle-container">
+    <%= link_to users_show_path(current_user), class: "child" do %>
+      <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
+    <% end %>
     <div class=" action_link">
       <%= link_to "Retour", match_index_path %>
     </div>
