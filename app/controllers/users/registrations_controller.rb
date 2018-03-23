@@ -36,7 +36,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
  # end
   def create
     super
-    Board.create(user_id: current_user.id) if current_user.board_ids == []
+    puts '================================================'
+    puts '================================================'
+    puts '================================================'
+    puts '=================SIGN UP========================'
+    puts '================================================'
+    puts '================================================'
+    puts '================================================'
+    Board.create(user_id: resource.id) if resource.boards == []
   end
 
   #POST /resource
