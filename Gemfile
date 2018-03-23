@@ -21,6 +21,8 @@ gem 'paperclip'
 gem 'mailjet'
 gem 'aws-sdk', '~> 2.3'
 gem 'gon'
+gem 'rollbar'
+gem 'oj'
 
 group :development, :test do
 
