@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
    def create
      super
-     Board.create(user_id: current_user.id) if current_user.board_ids == []
+     Board.create(user_id: current_user.id) if current_user.boards == []
    end
 
   # DELETE /resource/sign_out
