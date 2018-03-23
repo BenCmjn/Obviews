@@ -3,7 +3,7 @@
     flex-direction: column;
     margin: auto;
     width: 100%;
-    padding: 0;
+    padding: 13px;
 }
 
 .my-profile {
@@ -157,4 +157,12 @@ p.bio-description-self {
       color: black !important;
       text-decoration: none;
   }
+}
+
+.ranking-button a {
+    text-decoration: none;
+    color: #38FC8C;
+    &:hover {
+        color: black !important;
+      }
 }
