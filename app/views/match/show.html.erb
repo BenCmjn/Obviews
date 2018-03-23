@@ -5,33 +5,28 @@
       <span><%= @candidate_1.bio %></span>
     </p>
     <div class="action-bar">
-      <i class="fav material-icons">star_border</i>
-      <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="fav material-icons active">star</i> -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <!-- Activer si le user clique sur cette div -->
-      <!-- <i class="lock material-icons active">lock</i> -->
     </div>
   </div>
   <div class="picture ahead">
     <span><%= image_tag @candidate_1.avatar.url(:original), class: "img-fluid", :id=>"click-frame-pix" %></span>
     <div class="action-bar">
-      <!-- <i class="fav material-icons">star_border</i> -->
-      <!-- Activer si le user clique sur cette div -->
       <span class="user-name-display"><%= @candidate_1.firstname %> <%= @candidate_1.lastname %></span>
-      <!-- <i class="lock material-icons">lock_open</i> -->
-      <!-- Activer si le user clique sur cette div -->
     </div>
   </div>
 </div>
+
 <!-- MIDDLE -->
+
 <div class= "middle-container">
-
-    <%= link_to '/match/index', type:"button", class:"action_link", method: :get do %>
-    <button type="button" class="action_link">Retour</button>
+    <%= link_to users_show_path(current_user), class: "child" do %>
+      <%= image_tag current_user.avatar.url(:thumb), class: "circle-image"  %>
     <% end %>
-
+    <div class=" action_link">
+      <%= link_to "Retour", match_index_path %>
+    </div>
 </div>
+
 <!-- BOTTOM CONTAINER -->
 <div class= "candidate_2">
   <div class="bio behind">
@@ -46,7 +41,6 @@
     <span><%= image_tag @candidate_2.avatar.url(:original), class: "img-fluid" %></span>
     <div class="action-bar">
       <span class="user-name-display"><%= @candidate_2.firstname %> <%= @candidate_2.lastname %></span>
-
     </div>
   </div>
 </div>
