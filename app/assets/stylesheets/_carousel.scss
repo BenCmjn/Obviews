@@ -23,6 +23,7 @@
     font-family: 'Open sans';
     margin-top: 20px;
     padding: 15px;
+    margin-bottom: 0;
   }
 }
 
@@ -42,6 +43,7 @@
     text-align: center;
     margin-bottom: 10px;
     margin-top: 0px;
+    font-size: 24px;
   }
 }
 
@@ -76,5 +78,5 @@
   margin: 20px 0px;
 }
 .slick-track {
-  height: 350px;
+  height: 100%;
 }
