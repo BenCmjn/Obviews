@@ -13,18 +13,18 @@
 
 
 body {
-    background-color: #141424;
+    background-color: black;
     display: flex;
 }
 
 #central-container {
-    border-style: solid;
     background-color: black;
-    border-width: medium;
-    width: 400px;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
