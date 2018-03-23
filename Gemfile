@@ -23,6 +23,7 @@ gem 'aws-sdk', '~> 2.3'
 gem 'gon'
 gem 'rollbar'
 gem 'oj'
+gem 'serviceworker-rails'
 
 group :development, :test do
 
