@@ -1,5 +1,12 @@
 class BoardController < ApplicationController
-  before_action :authenticate_user!
+
+before_action :my_authentication
+
+def my_authentication
+     unless user_signed_in? 
+        redirect_to users_carousel_path
+     end
+end
 
   def random
     puts 'random #1'
