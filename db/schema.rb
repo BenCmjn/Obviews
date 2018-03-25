@@ -10,40 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180314130717) do
+ActiveRecord::Schema.define(version: 20180320140223) do
 
   create_table "archived_boards", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "candidate_1_id"
-    t.integer "candidate_2_id"
     t.integer "lock"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "candidate_1_picture"
-    t.string "candidate_1_firstname"
-    t.string "candidate_1_lastname"
-    t.text "candidate_1_bio"
-    t.text "candidate_2_picture"
-    t.string "candidate_2_firstname"
-    t.string "candidate_2_lastname"
-    t.text "candidate_2_bio"
+    t.boolean "is_match"
+  end
+
+  create_table "archived_boards_users", id: false, force: :cascade do |t|
+    t.integer "archived_board_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "boards", force: :cascade do |t|
-    t.integer "candidate_1_id"
-    t.integer "candidate_2_id"
-    t.integer "lock"
+    t.integer "lock", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.text "candidate_1_picture"
-    t.string "candidate_1_firstname"
-    t.string "candidate_1_lastname"
-    t.text "candidate_1_bio"
-    t.text "candidate_2_picture"
-    t.string "candidate_2_firstname"
-    t.string "candidate_2_lastname"
-    t.text "candidate_2_bio"
+  end
+
+  create_table "boards_users", id: false, force: :cascade do |t|
+    t.integer "board_id", null: false
+    t.integer "user_id", null: false
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.integer "lock"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "matches_users", id: false, force: :cascade do |t|
+    t.integer "match_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,9 +67,16 @@ ActiveRecord::Schema.define(version: 20180314130717) do
     t.text "bio"
     t.string "phone"
     t.integer "match_count"
-    t.integer "score"
+    t.integer "karma", default: 10
     t.string "city"
     t.integer "gender"
+    t.text "picture"
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.boolean "first_time", default: true
+    t.boolean "randomize", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

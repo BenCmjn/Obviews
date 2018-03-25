@@ -5,34 +5,39 @@
 
     <div class="pictures-confirmation">
       <div class="pix-layer">
-        <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/14910465_10154061156047253_6893560435987266829_n.jpg?oh=ea93c10ad90389172efff7b03861e2d0&oe=5B4837E7"></img>
-        <img src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/17265134_10212544381703041_6003345260275229759_n.jpg?oh=6a59f3ca6a345cd6993bb945e96c73dd&oe=5B3A8972"></img>
+        <div id="first" class="yellow-circle"></div>
+        <div id="second" class="yellow-circle"></div>
+        <div id="third" class="blue-circle" ></div>
+        <div id="fourth" class="blue-circle" ></div>
+        <div id="fith" class="green-circle" ></div>
+        <div id="sixth" class="green-circle" ></div>
+        <%= image_tag @candidate_1.avatar.url(:thumb), class: "circle-image" %>
+        <%= image_tag @candidate_2.avatar.url(:thumb), class: "circle-image" %>
+
       </div>
-      <!--
-      <div class="circles-layer">
-        <div class="yellow-circle"></div>
-        <div class="yellow-circle"></div>
-
-        <div class="blue-circle"></div>
-        <div class="blue-circle"></div>
-      </div>
-    -->
+    
     </div>
+      <a target="_blank" class="CTA_button"
+        <%= mail_to "#{@candidate_1.email}", "ENVOI D'E-MAIL!", cc: "#{@candidate_2.email}", subject: "#{@candidate_1.firstname} & #{@candidate_2.firstname}, je pense que vous pourriez bien vous entendre ! ", body:"Hello #{@candidate_1.firstname} & #{@candidate_2.firstname}, 
+          \n Je vous ai fait matcher sur Obviews ! Je pense que vous aimeriez vous rencontrer, pour les raisons suivantes :
+          \n \n \n
+          \n A très vite,
+          \n #{@current_user.firstname}
+          \n \n Retrouvez-vous sur www.obviews.com"
+        %>
+      </a>
 
-    <div class="selected-names">
-      Lorenzo & Anaïs...
-    </div>
+      <%= link_to "Valide le match", match_path, class: "action-button"%>
 
-    <div class="input-area">
-        <textarea>Dîtes un mot pour introduire la conversation…
-        </textarea>
-    </div>
-
-    <div class="CTA_button">
-          <a href='#'>ENVOIE !</a>
-    </div>
-
-    <div class="action_link">
-          <a href='#' >Annuler</a>
+    <div class="action_link" style="margin-top: 30px">
+      <%= link_to "Annuler", root_path %>
     </div>
 </div>
+
+
+
+<!--     <div class="CTA_button">
+          <a href='#'>ENVOIE !</a>
+    </div> -->
+
+

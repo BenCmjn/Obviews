@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -8,8 +7,22 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '962af5a42d158f6cc02c277f8b281d8bc29e181bc54aade5d37458ac061107006420cdd12c45fc93d102b7382c004549f63b4db4b4529119a032a3e4957a8f7a'
+  # config.secret_key = 'f55b212cb4fe0a15a7050caaca38afb7792e9dc575da6a6ef87c9535a3eeea120c737eb6d234d682fbf316d08904bd44854e47d97db06c3618efc44125da3ce2'
+  config.secret_key = '19b8bfda02927d16e9ca4358447dce2c92635ee2d2c86215ca6407572516fd4536339249e94e1c90b884d70d703b9e9f129fb55a3ce868d0a6078c07e6156795'
 
+
+#  Warden::Manager.after_set_user do |current_user,auth,opts|
+ #   if current_user.boards.first == nil
+  #    current_user.boards << Board.create(user_id: current_user.id)
+  #    current_user.save
+  #  end
+ # end
+ # Warden::Manager.after_authentication do |current_user,auth,opts|
+ #   if current_user.boards.first == nil
+ #     current_user.boards << Board.create(user_id: current_user.id)
+ #     current_user.save
+ #   end
+ # end
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
