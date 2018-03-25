@@ -29,7 +29,7 @@ before_action :my_authentication
   end
  
   def show
-    tempboard = Board.where(user_id: current_user.id)
+    #tempboard = Board.where(user_id: current_user.id)
     if current_user.randomize == true
       self.random
     end

@@ -19,6 +19,19 @@ class Users::SessionsController < Devise::SessionsController
     puts '================================================'
     puts '================================================'
     Board.create(user_id: current_user.id) if current_user.boards == []
+
+    tempboard = Board.where(user_id: current_user.id)
+    board = Board.find(tempboard.ids).last
+
+    ids = User.pluck(:id)
+    ids.delete_if {|id| id == current_user.id }
+    fate = ids.shuffle[0..1]
+    board.user_ids = [fate[0], fate[1]]
+    board.users = [User.find(fate[0]), User.find(fate[1])]
+    board.save
+    
+    current_user.randomize = false
+    current_user.save
    end
 
   # DELETE /resource/sign_out
