@@ -17,30 +17,9 @@ body {
     display: flex;
 }
 
-.go_landing{
-    z-index: 20;
-    font-family: "Kalam";
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-    letter-spacing: 2px;
-    padding: 10px 50px;
-    border-radius: 2px;
-    margin: 30px 10px;
-    a {
-        text-decoration: none;
-        color: black;
-    }
-}
-.go_landing:hover a {
-    text-decoration: none;
-    color: #38FC8C;
-}
-
-//////////////// CENTRAL CONTAINER /////////////////
 #central-container {
-    // max-width: calc(100vw - 50%);
-    max-width: 360px;
+    background-color: #222;
+    max-width: calc(100vw - 50%);
     height: calc(100vh - 15vh);
     margin-top: 40px;
     display: flex;
@@ -48,48 +27,8 @@ body {
     padding-left: 0;
     padding-right: 0;
     border: 1px solid #848484;
-    border-radius: 1em;
-    /* ----------- iPhone 4 and 4S ----------- */
-    /* Portrait */
-    @media only screen and (min-device-width: 320px) and (max-device-width: 530px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-        width: 100vw;
-        max-width: inherit;
-        height: 100vh;
-        margin-top: 0px;
-        display: flex;
-        flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        border: none;
-        border-radius: 0px;
-    }
 }
 
-.phone_head{
-    width: 100%;
-    background-color: black;
-    height: 8%;
-    border-radius: 1em 1em 0 0;
-    margin-top: 1px;
-    border-bottom: 1px solid #848484;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 530px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-        display: none;
-    }
-}
-.phone_foot{
-    width: 100%;
-    background-color: black;
-    height: 8%;
-    border-radius: 0 0 1em 1em ;
-    margin-top: -1px;
-    border-top: 1px solid #848484;
-    @media only screen and (min-device-width: 320px) and (max-device-width: 530px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-        display: none;
-    }
-}
-
-
-//////////////// END CENTRAL CONTAINER //////////////
 
 /* ACTION BUTTONS */
 
@@ -161,7 +100,6 @@ body {
         color: black !important;
     }
 }
-
 
 
 
