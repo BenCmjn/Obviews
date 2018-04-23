@@ -74,6 +74,8 @@ body {
     border-bottom: 1px solid #848484;
     @media only screen and (min-device-width: 320px) and (max-device-width: 530px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         display: none;
+
+
     }
 }
 .phone_foot{
@@ -85,6 +87,8 @@ body {
     border-top: 1px solid #848484;
     @media only screen and (min-device-width: 320px) and (max-device-width: 530px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         display: none;
+
+        
     }
 }
 
